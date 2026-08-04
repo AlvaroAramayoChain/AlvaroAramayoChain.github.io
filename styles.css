@@ -415,12 +415,12 @@ a{ color:inherit; }
   padding-left:.85rem; margin:0;
 }
 
-/* ── interactive booking demo (sample data only) ────────────── */
+/* ── interactive site-preview demo (sample copy only) ───────── */
 
 .demo{ perspective:1800px; }
 .demo__inner{
   position:relative;
-  min-height:19rem;
+  min-height:21rem;
   transition:transform .85s var(--ease);
   transform-style:preserve-3d;
 }
@@ -434,61 +434,8 @@ a{ color:inherit; }
 }
 .demo__face--back{
   transform:rotateY(180deg);
-  align-items:center; justify-content:center; text-align:center;
-  gap:.4rem;
 }
 
-.demo__head{
-  display:flex; align-items:baseline; justify-content:space-between;
-  margin-bottom:1.3rem;
-}
-.demo__biz{ font-family:var(--display); font-weight:500; font-size:1.05rem; }
-.demo__day{
-  font-family:var(--mono); font-size:.68rem; letter-spacing:.1em;
-  text-transform:uppercase; color:var(--muted);
-}
-
-.demo__slots{
-  display:grid; grid-template-columns:repeat(auto-fill,minmax(4.4rem,1fr));
-  gap:.55rem;
-  margin-bottom:1.3rem;
-}
-.demo__slot{
-  font-family:var(--mono); font-size:.82rem;
-  padding:.7rem .5rem;
-  border-radius:6px;
-  border:1px solid var(--line);
-  background:var(--ink);
-  color:var(--paper);
-  cursor:pointer;
-  transition:background .25s var(--ease), border-color .25s var(--ease),
-             color .25s var(--ease), transform .25s var(--ease);
-}
-.demo__slot:hover:not(:disabled){
-  border-color:var(--amber); color:var(--amber); transform:translateY(-2px);
-}
-.demo__slot:focus-visible{ outline-offset:2px; }
-.demo__slot--taken{
-  color:var(--muted); text-decoration:line-through;
-  background:var(--raise); cursor:not-allowed;
-}
-
-.demo__hint{
-  margin:auto 0 0; font-size:.75rem; color:var(--muted);
-  font-family:var(--mono); letter-spacing:.02em;
-}
-
-.demo__check{
-  width:2.6rem; height:2.6rem;
-  display:flex; align-items:center; justify-content:center;
-  border-radius:50%;
-  background:color-mix(in srgb, var(--amber) 18%, transparent);
-  color:var(--amber);
-  font-size:1.3rem;
-  margin-bottom:.4rem;
-}
-.demo__msg{ margin:0; font-size:1rem; }
-.demo__sub{ margin:0 0 1.1rem; color:var(--muted); font-size:.82rem; }
 .demo__reset{
   font-family:var(--mono); font-size:.75rem; letter-spacing:.06em;
   padding:.6rem 1.1rem;
@@ -497,8 +444,92 @@ a{ color:inherit; }
   background:transparent; color:var(--paper);
   cursor:pointer;
   transition:border-color .25s var(--ease), color .25s var(--ease);
+  align-self:flex-start;
 }
 .demo__reset:hover{ border-color:var(--violet); color:var(--violet); }
+
+/* the demo recreates Salta Sistemas' actual light theme inside the dark
+   browser frame, using the project's own token values (not the portfolio's) */
+.site-preview{
+  --sp-bg:     #ffffff;
+  --sp-text:   #0f172a;
+  --sp-muted:  #64748b;
+  --sp-border: #e5e7eb;
+  --sp-accent: #2563eb;
+  background:var(--sp-bg);
+  color:var(--sp-text);
+  font-family:var(--body);
+}
+
+.site-preview__nav{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:.8rem;
+  padding-bottom:1rem; margin-bottom:1.2rem;
+  border-bottom:1px solid var(--sp-border);
+  font-size:.72rem;
+}
+.site-preview__logo{
+  display:flex; align-items:center; gap:.4rem;
+  font-weight:600; letter-spacing:-.01em;
+}
+.site-preview__dot{
+  width:.5rem; height:.5rem; border-radius:50%;
+  background:var(--sp-accent); flex:none;
+}
+.site-preview__navlinks{ color:var(--sp-muted); letter-spacing:.02em; }
+
+/* the shared .demo__reset button is styled for the dark portfolio elsewhere —
+   restyle it to match the light site-preview it sits on top of here */
+.site-preview .demo__reset{
+  color:var(--sp-accent);
+  border-color:var(--sp-border);
+  background:transparent;
+}
+.site-preview .demo__reset:hover{
+  border-color:var(--sp-accent);
+  background:color-mix(in srgb, var(--sp-accent) 8%, transparent);
+}
+
+.site-preview__eyebrow{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--sp-accent);
+  margin:0 0 .6rem;
+}
+.site-preview__title{
+  font-family:var(--display); font-weight:600;
+  font-size:1.35rem; letter-spacing:-.02em; line-height:1.15;
+  margin:0 0 .6rem;
+}
+.site-preview__lead{
+  color:var(--sp-muted); font-size:.86rem; line-height:1.55;
+  margin:0 0 1.3rem; max-width:32ch;
+}
+
+.site-preview__actions{ display:flex; flex-wrap:wrap; gap:.55rem; margin-bottom:auto; }
+.site-preview__btn{
+  font-size:.76rem; font-weight:500;
+  padding:.55rem 1rem;
+  border-radius:999px;
+}
+.site-preview__btn--solid{ background:var(--sp-accent); color:#fff; }
+.site-preview__btn--outline{ border:1px solid var(--sp-border); color:var(--sp-text); }
+
+.site-preview__goto{ margin-top:1.3rem; }
+
+.site-preview--services .site-preview__eyebrow{ margin-bottom:1rem; }
+.site-preview__grid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));
+  gap:.6rem;
+  margin-bottom:1.3rem;
+}
+.site-preview__card{
+  padding:.9rem .9rem;
+  border:1px solid var(--sp-border);
+  border-radius:8px;
+  font-size:.8rem; font-weight:500;
+  color:var(--sp-text);
+  background:var(--sp-bg-alt, #f8fafc);
+}
 
 /* ── toolkit ─────────────────────────────────────────────── */
 

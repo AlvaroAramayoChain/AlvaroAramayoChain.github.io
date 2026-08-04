@@ -288,23 +288,19 @@ if (!REDUCED && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
   });
 }
 
-/* ── 5. booking demo — sample data only, resets on its own ── */
+/* ── 5. site preview demo — sample copy only, resets on its own ── */
 
-(function bookingDemo() {
-  const demo = document.getElementById('bookingDemo');
+(function siteDemo() {
+  const demo = document.getElementById('siteDemo');
   if (!demo) return;
 
-  const timeOut = demo.querySelector('[data-demo-time]');
+  const toServices = demo.querySelector('.site-preview__goto');
+  if (toServices) {
+    toServices.addEventListener('click', () => demo.classList.add('is-flipped'));
+  }
 
-  demo.querySelectorAll('.demo__slot:not(.demo__slot--taken)').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      if (timeOut) timeOut.textContent = btn.dataset.time;
-      demo.classList.add('is-flipped');
-    });
-  });
-
-  const reset = demo.querySelector('.demo__reset');
-  if (reset) {
-    reset.addEventListener('click', () => demo.classList.remove('is-flipped'));
+  const back = demo.querySelector('.site-preview--services .demo__reset');
+  if (back) {
+    back.addEventListener('click', () => demo.classList.remove('is-flipped'));
   }
 })();
