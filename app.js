@@ -288,19 +288,19 @@ if (!REDUCED && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
   });
 }
 
-/* ── 5. site preview demo — sample copy only, resets on its own ── */
+/* ── 5. site preview demo — sample copy only, browsable in place ── */
 
 (function siteDemo() {
   const demo = document.getElementById('siteDemo');
   if (!demo) return;
 
-  const toServices = demo.querySelector('.site-preview__goto');
-  if (toServices) {
-    toServices.addEventListener('click', () => demo.classList.add('is-flipped'));
-  }
+  const scroller = demo.querySelector('.demo__scroll');
+  if (!scroller) return;
 
-  const back = demo.querySelector('.site-preview--services .demo__reset');
-  if (back) {
-    back.addEventListener('click', () => demo.classList.remove('is-flipped'));
-  }
+  demo.querySelectorAll('[data-goto]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = demo.querySelector('#' + btn.dataset.goto);
+      if (target) scroller.scrollTo({ top: target.offsetTop - 6, behavior: 'smooth' });
+    });
+  });
 })();

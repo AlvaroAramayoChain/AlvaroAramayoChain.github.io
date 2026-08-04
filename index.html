@@ -137,34 +137,88 @@
       </div>
 
       <div class="demo" id="siteDemo">
-        <div class="demo__inner">
-          <div class="demo__face demo__face--front site-preview">
-            <div class="site-preview__nav">
-              <span class="site-preview__logo"><span class="site-preview__dot"></span>Salta Sistemas</span>
-              <span class="site-preview__navlinks">Inicio · Servicios · Trabajos · Contacto</span>
-            </div>
+        <nav class="site-preview__nav" aria-label="Demo page sections">
+          <span class="site-preview__logo"><span class="site-preview__dot"></span>Salta Sistemas</span>
+          <span class="site-preview__navlinks">
+            <button type="button" data-goto="spHero">Inicio</button>
+            <button type="button" data-goto="spServices">Servicios</button>
+            <button type="button" data-goto="spPortfolio">Trabajos</button>
+            <button type="button" data-goto="spContact">Contacto</button>
+          </span>
+        </nav>
+
+        <div class="demo__scroll site-preview">
+          <section id="spHero" class="sp-hero">
             <p class="site-preview__eyebrow">Tecnología para organizaciones · Salta, Argentina</p>
             <h4 class="site-preview__title">Soluciones tecnológicas integrales</h4>
             <p class="site-preview__lead">Soporte, redes, seguridad y desarrollo a medida —
               para que la tecnología nunca frene la operación.</p>
             <div class="site-preview__actions">
               <span class="site-preview__btn site-preview__btn--solid">Contactar</span>
-              <span class="site-preview__btn site-preview__btn--outline">Ver servicios</span>
+              <button class="site-preview__btn site-preview__btn--outline" type="button" data-goto="spServices">Ver servicios</button>
             </div>
-            <button class="demo__reset site-preview__goto" type="button">Ver catálogo de servicios →</button>
-          </div>
+            <p class="sp-trust">
+              <span>✓ Primer diagnóstico sin cargo</span>
+              <span>🕐 Respuesta el mismo día hábil</span>
+            </p>
+          </section>
 
-          <div class="demo__face demo__face--back site-preview site-preview--services">
+          <section id="spServices" class="sp-block">
             <p class="site-preview__eyebrow">Servicios</p>
             <div class="site-preview__grid">
-              <div class="site-preview__card">Soporte informático</div>
-              <div class="site-preview__card">Redes e infraestructura</div>
-              <div class="site-preview__card">Servicio técnico</div>
-              <div class="site-preview__card">Seguridad informática</div>
-              <div class="site-preview__card">Desarrollo de soluciones</div>
+              <div class="site-preview__card">
+                <span class="sp-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-9 9v3a2 2 0 0 0 2 2h1v-6H4a8 8 0 0 1 16 0h-2v6h1a2 2 0 0 0 2-2v-3a9 9 0 0 0-9-9z"/></svg></span>
+                Soporte informático
+              </div>
+              <div class="site-preview__card">
+                <span class="sp-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="5" rx="1"/><rect x="14" y="4" width="7" height="5" rx="1"/><rect x="8.5" y="15" width="7" height="5" rx="1"/><path d="M6.5 9v3a2 2 0 0 0 2 2h1M17.5 9v3a2 2 0 0 0-2 2h-1"/></svg></span>
+                Redes e infraestructura
+              </div>
+              <div class="site-preview__card">
+                <span class="sp-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 3.3a1 1 0 0 1 1.4 0l1.6 1.6a1 1 0 0 1 0 1.4l-9 9-3.6 1 1-3.6 9-9z"/><path d="M4 21h6"/></svg></span>
+                Servicio técnico
+              </div>
+              <div class="site-preview__card">
+                <span class="sp-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-3 7.9-7 10-4-2.1-7-5.4-7-10V6l7-3z"/><path d="M9.3 12l1.9 1.9 3.5-3.9"/></svg></span>
+                Seguridad informática
+              </div>
+              <div class="site-preview__card">
+                <span class="sp-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8.5 4.5 12 8 15.5M16 8.5l3.5 3.5-3.5 3.5M13.5 5l-3 14"/></svg></span>
+                Desarrollo de soluciones
+              </div>
             </div>
-            <button class="demo__reset" type="button">← Volver al inicio</button>
-          </div>
+          </section>
+
+          <section id="spPortfolio" class="sp-block">
+            <p class="site-preview__eyebrow">Trabajos realizados</p>
+            <div class="sp-portfolio">
+              <div class="sp-portfolio__card">
+                <span class="sp-portfolio__thumb sp-portfolio__thumb--a"></span>
+                <strong>Cableado estructurado y redes</strong>
+                <small>Redes e infraestructura · Salta Capital</small>
+              </div>
+              <div class="sp-portfolio__card">
+                <span class="sp-portfolio__thumb sp-portfolio__thumb--b"></span>
+                <strong>Sistema de gestión a medida</strong>
+                <small>Desarrollo de soluciones · Salta Capital</small>
+              </div>
+              <div class="sp-portfolio__card">
+                <span class="sp-portfolio__thumb sp-portfolio__thumb--c"></span>
+                <strong>Auditoría y hardening</strong>
+                <small>Seguridad informática · Salta Capital</small>
+              </div>
+            </div>
+          </section>
+
+          <section id="spContact" class="sp-block sp-contact">
+            <p class="site-preview__eyebrow">Contacto</p>
+            <h5 class="sp-contact__title">¿Hablamos de tu proyecto?</h5>
+            <p class="site-preview__lead">Formulario con validación en el servidor y
+              notificación automática — cada consulta queda guardada, nunca se pierde.</p>
+            <span class="site-preview__btn site-preview__btn--solid">Enviar mensaje</span>
+          </section>
+
+          <footer class="sp-footer">Salta Sistemas · Sitio institucional</footer>
         </div>
       </div>
     </div>
@@ -189,9 +243,9 @@
         <li>Ticketing module ready</li>
       </ul>
 
-      <p class="case__note">Simplified recreation above, not the live site — it runs
-        entirely in your browser with generic sample copy. No real client names,
-        contact details or business data are shown anywhere on this page.</p>
+      <p class="case__note">Simplified recreation above, not the live site — scroll or use
+        its nav to browse the page. Runs entirely in your browser with generic sample
+        copy; no real client names, contact details or business data shown anywhere.</p>
     </div>
   </article>
 </section>
