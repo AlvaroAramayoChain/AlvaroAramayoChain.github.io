@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Mock of a booking interface: weekly calendar with free and booked time slots">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101527"/>
+      <stop offset="1" stop-color="#0B0E1A"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4B45A"/>
+      <stop offset="1" stop-color="#E0942C"/>
+    </linearGradient>
+    <style>
+      .m  { font-family: "JetBrains Mono", ui-monospace, monospace; }
+      .lbl{ font-size: 11px; letter-spacing: 1.4px; fill:#8A90AE; }
+      .d  { font-size: 12px; letter-spacing: .6px; fill:#E9E7F2; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- sidebar -->
+  <rect x="0" y="0" width="196" height="750" fill="#0E1223"/>
+  <line x1="196" y1="0" x2="196" y2="750" stroke="#232A45"/>
+  <rect x="26" y="30" width="13" height="13" rx="3.5" fill="#F0A742"/>
+  <rect x="48" y="33" width="72" height="8" rx="4" fill="#2B3252"/>
+
+  <rect x="20" y="86" width="156" height="34" rx="7" fill="#171E36"/>
+  <rect x="34" y="99" width="9" height="9" rx="2" fill="#F0A742"/>
+  <rect x="52" y="100" width="62" height="7" rx="3.5" fill="#3A4269"/>
+
+  <g fill="#252C4A">
+    <rect x="34" y="140" width="9" height="9" rx="2"/><rect x="52" y="141" width="80" height="7" rx="3.5"/>
+    <rect x="34" y="176" width="9" height="9" rx="2"/><rect x="52" y="177" width="54" height="7" rx="3.5"/>
+    <rect x="34" y="212" width="9" height="9" rx="2"/><rect x="52" y="213" width="70" height="7" rx="3.5"/>
+    <rect x="34" y="248" width="9" height="9" rx="2"/><rect x="52" y="249" width="44" height="7" rx="3.5"/>
+  </g>
+
+  <line x1="20" y1="292" x2="176" y2="292" stroke="#1D2440"/>
+  <text class="m lbl" x="26" y="320">REMINDERS</text>
+  <rect x="26" y="336" width="150" height="46" rx="6" fill="#141A2E" stroke="#232A45"/>
+  <circle cx="44" cy="359" r="6" fill="#7C6BF5"/>
+  <rect x="58" y="349" width="82" height="6" rx="3" fill="#2B3252"/>
+  <rect x="58" y="362" width="52" height="6" rx="3" fill="#232A45"/>
+
+  <rect x="26" y="392" width="150" height="46" rx="6" fill="#141A2E" stroke="#232A45"/>
+  <circle cx="44" cy="415" r="6" fill="#F0A742"/>
+  <rect x="58" y="405" width="66" height="6" rx="3" fill="#2B3252"/>
+  <rect x="58" y="418" width="88" height="6" rx="3" fill="#232A45"/>
+
+  <!-- header -->
+  <rect x="196" y="0" width="1004" height="72" fill="#0E1223"/>
+  <line x1="196" y1="72" x2="1200" y2="72" stroke="#232A45"/>
+  <text class="m d" x="232" y="42">This week</text>
+  <rect x="352" y="26" width="26" height="22" rx="5" fill="#171E36"/>
+  <rect x="384" y="26" width="26" height="22" rx="5" fill="#171E36"/>
+  <text class="m lbl" x="358" y="41">‹</text>
+  <text class="m lbl" x="391" y="41">›</text>
+  <rect x="1004" y="24" width="160" height="26" rx="13" fill="url(#amber)"/>
+  <text class="m" x="1030" y="41" font-size="11" letter-spacing="1.2" fill="#0B0E1A">NEW BOOKING</text>
+
+  <!-- day columns -->
+  <g class="m lbl">
+    <text x="286" y="108">MON</text><text x="418" y="108">TUE</text>
+    <text x="550" y="108">WED</text><text x="682" y="108">THU</text>
+    <text x="814" y="108">FRI</text><text x="946" y="108">SAT</text>
+  </g>
+
+  <!-- hour rail -->
+  <g class="m lbl" text-anchor="end">
+    <text x="248" y="152">09:00</text><text x="248" y="212">10:00</text>
+    <text x="248" y="272">11:00</text><text x="248" y="332">12:00</text>
+    <text x="248" y="392">14:00</text><text x="248" y="452">15:00</text>
+    <text x="248" y="512">16:00</text><text x="248" y="572">17:00</text>
+    <text x="248" y="632">18:00</text>
+  </g>
+
+  <!-- grid lines -->
+  <g stroke="#1B2138">
+    <line x1="264" y1="126" x2="1164" y2="126"/>
+    <line x1="264" y1="186" x2="1164" y2="186"/>
+    <line x1="264" y1="246" x2="1164" y2="246"/>
+    <line x1="264" y1="306" x2="1164" y2="306"/>
+    <line x1="264" y1="366" x2="1164" y2="366"/>
+    <line x1="264" y1="426" x2="1164" y2="426"/>
+    <line x1="264" y1="486" x2="1164" y2="486"/>
+    <line x1="264" y1="546" x2="1164" y2="546"/>
+    <line x1="264" y1="606" x2="1164" y2="606"/>
+    <line x1="264" y1="666" x2="1164" y2="666"/>
+  </g>
+
+  <!-- slots: open -->
+  <g fill="#151B31" stroke="#222945">
+    <rect x="270" y="132" width="120" height="48" rx="5"/>
+    <rect x="270" y="252" width="120" height="48" rx="5"/>
+    <rect x="270" y="432" width="120" height="48" rx="5"/>
+    <rect x="270" y="552" width="120" height="48" rx="5"/>
+    <rect x="402" y="132" width="120" height="48" rx="5"/>
+    <rect x="402" y="252" width="120" height="48" rx="5"/>
+    <rect x="402" y="492" width="120" height="48" rx="5"/>
+    <rect x="534" y="192" width="120" height="48" rx="5"/>
+    <rect x="534" y="372" width="120" height="48" rx="5"/>
+    <rect x="534" y="612" width="120" height="48" rx="5"/>
+    <rect x="666" y="132" width="120" height="48" rx="5"/>
+    <rect x="666" y="312" width="120" height="48" rx="5"/>
+    <rect x="666" y="492" width="120" height="48" rx="5"/>
+    <rect x="798" y="192" width="120" height="48" rx="5"/>
+    <rect x="798" y="372" width="120" height="48" rx="5"/>
+    <rect x="798" y="552" width="120" height="48" rx="5"/>
+    <rect x="930" y="132" width="120" height="48" rx="5"/>
+    <rect x="930" y="252" width="120" height="48" rx="5"/>
+    <rect x="930" y="432" width="120" height="48" rx="5"/>
+    <rect x="930" y="612" width="120" height="48" rx="5"/>
+  </g>
+
+  <!-- slots: booked -->
+  <g>
+    <rect x="270" y="192" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="270" y="372" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="402" y="312" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="402" y="432" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="534" y="132" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="534" y="492" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="666" y="252" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="666" y="552" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="798" y="252" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="798" y="432" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="930" y="312" width="120" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+    <rect x="1062" y="192" width="96" height="48" rx="5" fill="#7C6BF5" opacity=".85"/>
+    <rect x="1062" y="372" width="96" height="48" rx="5" fill="#F0A742" opacity=".92"/>
+  </g>
+
+  <!-- booked slot text bars -->
+  <g fill="#0B0E1A" opacity=".55">
+    <rect x="282" y="206" width="58" height="6" rx="3"/><rect x="282" y="218" width="34" height="5" rx="2.5"/>
+    <rect x="282" y="386" width="46" height="6" rx="3"/><rect x="282" y="398" width="38" height="5" rx="2.5"/>
+    <rect x="414" y="326" width="54" height="6" rx="3"/><rect x="414" y="338" width="30" height="5" rx="2.5"/>
+    <rect x="414" y="446" width="44" height="6" rx="3"/><rect x="414" y="458" width="36" height="5" rx="2.5"/>
+    <rect x="546" y="146" width="60" height="6" rx="3"/><rect x="546" y="158" width="32" height="5" rx="2.5"/>
+    <rect x="546" y="506" width="42" height="6" rx="3"/><rect x="546" y="518" width="40" height="5" rx="2.5"/>
+    <rect x="678" y="266" width="56" height="6" rx="3"/><rect x="678" y="278" width="28" height="5" rx="2.5"/>
+    <rect x="678" y="566" width="48" height="6" rx="3"/><rect x="678" y="578" width="34" height="5" rx="2.5"/>
+    <rect x="810" y="266" width="50" height="6" rx="3"/><rect x="810" y="278" width="36" height="5" rx="2.5"/>
+    <rect x="810" y="446" width="58" height="6" rx="3"/><rect x="810" y="458" width="30" height="5" rx="2.5"/>
+    <rect x="942" y="326" width="52" height="6" rx="3"/><rect x="942" y="338" width="38" height="5" rx="2.5"/>
+  </g>
+
+  <!-- right edge: partial sunday column -->
+  <g fill="#151B31" stroke="#222945">
+    <rect x="1062" y="132" width="96" height="48" rx="5"/>
+    <rect x="1062" y="252" width="96" height="48" rx="5"/>
+    <rect x="1062" y="492" width="96" height="48" rx="5"/>
+    <rect x="1062" y="612" width="96" height="48" rx="5"/>
+  </g>
+  <text class="m lbl" x="1078" y="108">SUN</text>
+
+  <!-- footer strip -->
+  <line x1="196" y1="694" x2="1200" y2="694" stroke="#232A45"/>
+  <g class="m lbl">
+    <text x="232" y="723">SAMPLE DATA</text>
+    <text x="360" y="723">·</text>
+    <text x="380" y="723">13 BOOKED</text>
+    <text x="490" y="723">·</text>
+    <text x="510" y="723">24 FREE SLOTS</text>
+  </g>
+  <rect x="1062" y="708" width="96" height="9" rx="4.5" fill="#1D2440"/>
+</svg>

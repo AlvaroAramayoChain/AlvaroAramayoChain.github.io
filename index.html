@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alvaro Aramayo Chain — Web Developer</title>
+<meta name="description" content="Web developer building websites and web applications, with WhatsApp and email integrations. Based in Argentina.">
+<meta name="theme-color" content="#0B0E1A">
+
+<meta property="og:title" content="Alvaro Aramayo Chain — Web Developer">
+<meta property="og:description" content="Web developer building websites and web applications. Based in Argentina.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/alvaro.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B0E1A'/%3E%3Crect x='7' y='9' width='8' height='5' rx='1.5' fill='%23F0A742'/%3E%3Crect x='17' y='9' width='8' height='5' rx='1.5' fill='%232B3252'/%3E%3Crect x='7' y='18' width='8' height='5' rx='1.5' fill='%232B3252'/%3E%3Crect x='17' y='18' width='8' height='5' rx='1.5' fill='%237C6BF5'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Sans:ital,wght@0,400..600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="nav">
+  <a class="nav__mark" href="#top" aria-label="Back to top">
+    <span class="nav__slab" aria-hidden="true"></span>
+    AAC
+  </a>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#toolkit">Toolkit</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ───────────────────────── HERO ───────────────────────── -->
+<section class="hero" id="top">
+  <canvas class="lattice" id="lattice" aria-hidden="true"></canvas>
+  <div class="hero__veil" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <p class="eyebrow hero__eyebrow"><span>Web developer</span> · Argentina</p>
+
+    <h1 class="hero__title">
+      <span class="line"><span>I build the software</span></span>
+      <span class="line"><span>that keeps small</span></span>
+      <span class="line"><span>businesses <em>booked</em>.</span></span>
+    </h1>
+
+    <p class="hero__sub">Websites and web applications — with the reminders,
+      confirmations and follow-ups wired in.</p>
+
+    <div class="hero__actions">
+      <a class="btn btn--solid" href="#work">See the work</a>
+      <a class="btn btn--ghost" href="mailto:alvaroaramayochain123@gmail.com">Get in touch</a>
+    </div>
+  </div>
+
+  <div class="hero__legend" aria-hidden="true">
+    <span class="key key--open"></span> free slot
+    <span class="key key--booked"></span> booked
+  </div>
+</section>
+
+<!-- ───────────────────────── ABOUT ───────────────────────── -->
+<section class="section about" id="about">
+  <p class="eyebrow reveal">About</p>
+
+  <div class="about__grid">
+    <figure class="portrait reveal">
+      <img src="assets/alvaro.jpg" alt="Portrait of Alvaro Aramayo Chain" width="880" height="1100" loading="lazy">
+      <figcaption>Alvaro Aramayo Chain</figcaption>
+    </figure>
+
+    <div class="about__body">
+      <h2 class="h2 reveal">Hi, I'm Alvaro. I make web products that hold up
+        once real customers start using them.</h2>
+
+      <p class="lede reveal" style="--d:.06s">Most of my work sits where a website stops being a
+        brochure and starts doing a job — taking a booking, sending the confirmation,
+        remembering to follow up. I care about the boring parts: clean data, sane
+        backend structure, nothing that falls over on a busy Saturday.</p>
+
+      <ul class="facts">
+        <li class="reveal" style="--d:.10s"><span>Focus</span> Websites and web applications</li>
+        <li class="reveal" style="--d:.14s"><span>Integrations</span> WhatsApp and email</li>
+        <li class="reveal" style="--d:.18s"><span>Practice</span> Backend best practices</li>
+        <li class="reveal" style="--d:.22s"><span>Studying</span> Cybersecurity</li>
+        <li class="reveal" style="--d:.26s"><span>Based in</span> Argentina · works remotely</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── WORK ───────────────────────── -->
+<section class="section work" id="work">
+  <p class="eyebrow reveal">Selected work</p>
+  <h2 class="h2 work__head reveal" style="--d:.05s">One product, built end to end.</h2>
+
+  <article class="case reveal" style="--d:.10s">
+    <div class="case__frame">
+      <div class="case__chrome" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="case__url">booking · demo</span>
+      </div>
+      <!-- ↓↓↓ Replace the <img> below with your own screenshot or video ↓↓↓ -->
+      <img class="case__shot" src="assets/demo-placeholder.svg"
+           alt="Interface of the booking platform: a weekly calendar with time slots and a booking panel"
+           loading="lazy">
+      <!-- ↑↑↑ See README for how to swap in a screenshot, GIF or video ↑↑↑ -->
+    </div>
+
+    <div class="case__meta">
+      <h3 class="case__title">Booking &amp; appointments platform</h3>
+      <p class="case__what">A scheduling app for local businesses — salons, clinics,
+        studios. Customers pick a free slot from the public page; the business gets a
+        clean agenda instead of a full inbox.</p>
+
+      <dl class="spec">
+        <div><dt>Role</dt><dd>Design &amp; development</dd></div>
+        <div><dt>Type</dt><dd>Multi-tenant web app</dd></div>
+        <div><dt>Status</dt><dd>In development</dd></div>
+      </dl>
+
+      <ul class="chips">
+        <li>Online booking page</li>
+        <li>WhatsApp reminders</li>
+        <li>Email confirmations</li>
+        <li>Per-business accounts</li>
+        <li>Admin agenda</li>
+      </ul>
+
+      <p class="case__note">Demo runs on sample data — no real customer information
+        is shown or shared.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ───────────────────────── TOOLKIT ───────────────────────── -->
+<section class="section toolkit" id="toolkit">
+  <p class="eyebrow reveal">Toolkit</p>
+  <h2 class="h2 reveal" style="--d:.05s">What I work with, grouped by what it's for.</h2>
+
+  <div class="stack">
+    <div class="stack__group reveal" style="--d:.08s">
+      <h3>Write</h3>
+      <ul><li>Python</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+    </div>
+    <div class="stack__group reveal" style="--d:.12s">
+      <h3>Store</h3>
+      <ul><li>SQL</li></ul>
+    </div>
+    <div class="stack__group reveal" style="--d:.16s">
+      <h3>Run</h3>
+      <ul><li>Linux</li><li>VirtualBox</li></ul>
+    </div>
+    <div class="stack__group reveal" style="--d:.20s">
+      <h3>Ship</h3>
+      <ul><li>Hosting management</li><li>FileZilla · FTP</li><li>Git</li><li>GitHub</li></ul>
+    </div>
+    <div class="stack__group reveal" style="--d:.24s">
+      <h3>Assist</h3>
+      <ul><li>Claude</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── CONTACT ───────────────────────── -->
+<footer class="section contact" id="contact">
+  <p class="eyebrow reveal">Contact</p>
+  <h2 class="contact__head reveal" style="--d:.05s">Have something to build?</h2>
+
+  <div class="contact__links">
+    <a class="clink reveal" style="--d:.10s" href="mailto:alvaroaramayochain123@gmail.com">
+      <span class="clink__label">Email</span>
+      <span class="clink__value">alvaroaramayochain123@gmail.com</span>
+    </a>
+    <a class="clink reveal" style="--d:.14s" href="https://github.com/AlvaroAramayoChain" target="_blank" rel="noopener">
+      <span class="clink__label">GitHub</span>
+      <span class="clink__value">@AlvaroAramayoChain</span>
+    </a>
+  </div>
+
+  <p class="sig">Alvaro Aramayo Chain · Argentina</p>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
