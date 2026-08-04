@@ -136,7 +136,7 @@
 <!-- ───────────────────────── WORK ───────────────────────── -->
 <section class="section work" id="work">
   <p class="eyebrow reveal">An example of the projects I build</p>
-  <h2 class="h2 work__head reveal" style="--d:.05s">One product, built end to end.</h2>
+  <h2 class="h2 work__head reveal" style="--d:.05s">Real products, built end to end.</h2>
 
   <article class="case reveal reveal--tilt" style="--d:.10s">
     <div class="case__frame" data-tilt="5">
@@ -250,6 +250,107 @@
         <li>SEO &amp; sitemap</li>
         <li>Contact form</li>
         <li>Ticketing module ready</li>
+      </ul>
+
+      <p class="case__note">Simplified recreation above, not the live site — scroll or use
+        its nav to browse the page. Runs entirely in your browser with generic sample
+        copy; no real client names, contact details or business data shown anywhere.</p>
+    </div>
+  </article>
+
+  <article class="case reveal reveal--tilt" style="--d:.14s">
+    <div class="case__frame" data-tilt="5">
+      <div class="case__chrome" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="case__url">mochec · demo</span>
+      </div>
+
+      <div class="demo" id="mochecDemo">
+        <nav class="site-preview__nav" aria-label="Demo page sections">
+          <span class="site-preview__logo"><span class="site-preview__dot"></span>mochec</span>
+          <span class="site-preview__navlinks">
+            <button type="button" data-goto="mcHero">Inicio</button>
+            <button type="button" data-goto="mcProducts">Productos</button>
+            <button type="button" data-goto="mcAbout">Nosotros</button>
+            <button type="button" data-goto="mcContact">Contacto</button>
+          </span>
+        </nav>
+
+        <div class="demo__scroll site-preview">
+          <section id="mcHero" class="sp-hero">
+            <p class="site-preview__eyebrow">Cultivos sanos, en su máximo rendimiento</p>
+            <h4 class="site-preview__title">Expertos en prevención del estrés vegetal</h4>
+            <p class="site-preview__lead">Soluciones nutricionales para acompañar al
+              productor en las etapas más sensibles del cultivo.</p>
+            <div class="site-preview__actions">
+              <span class="site-preview__btn site-preview__btn--solid">Ver productos</span>
+              <button class="site-preview__btn site-preview__btn--outline" type="button" data-goto="mcProducts">Hacer una consulta</button>
+            </div>
+            <p class="sp-trust">
+              <span>✓ Más de 18 años en el mercado agrícola</span>
+              <span>🌱 Foco en nutrición y sanidad vegetal</span>
+            </p>
+          </section>
+
+          <section id="mcProducts" class="sp-block">
+            <p class="site-preview__eyebrow">Destacados</p>
+            <div class="sp-portfolio">
+              <div class="sp-portfolio__card">
+                <span class="sp-portfolio__thumb sp-portfolio__thumb--mc-a"></span>
+                <strong>Maxiren TS</strong>
+                <small>Manejo del estrés vegetal · envío gratis</small>
+              </div>
+              <div class="sp-portfolio__card">
+                <span class="sp-portfolio__thumb sp-portfolio__thumb--mc-b"></span>
+                <strong>Maxiren K</strong>
+                <small>Potasio para calidad y llenado · envío gratis</small>
+              </div>
+              <div class="sp-portfolio__card">
+                <span class="sp-portfolio__thumb sp-portfolio__thumb--mc-c"></span>
+                <strong>Maxiren NPK</strong>
+                <small>Macronutrientes balanceados · envío gratis</small>
+              </div>
+            </div>
+          </section>
+
+          <section id="mcAbout" class="sp-block">
+            <p class="site-preview__eyebrow">Nuestra filosofía</p>
+            <h5 class="sp-contact__title">Acompañamos cada etapa del cultivo</h5>
+            <p class="site-preview__lead">Asesoramiento y experiencia puestos al servicio
+              del productor, buscando siempre mejor producción y rentabilidad — con una
+              página de política medioambiental propia y siempre visible.</p>
+          </section>
+
+          <section id="mcContact" class="sp-block sp-contact">
+            <p class="site-preview__eyebrow">Contacto</p>
+            <h5 class="sp-contact__title">¿Tenés una consulta?</h5>
+            <p class="site-preview__lead">Formulario propio más un botón flotante de
+              WhatsApp — sin pago online, pensado para consultas y asesoramiento directo.</p>
+            <span class="site-preview__btn site-preview__btn--solid">Escribir por WhatsApp</span>
+          </section>
+
+          <footer class="sp-footer">mochec · Chem.Eco Argentina S.R.L.</footer>
+        </div>
+      </div>
+    </div>
+
+    <div class="case__meta">
+      <h3 class="case__title">mochec — agrochemical product site</h3>
+      <p class="case__what">A product catalog and institutional site for an agrochemical
+        company — plant-nutrition formulations, an environmental policy page, and a
+        WhatsApp-first contact flow instead of online checkout.</p>
+
+      <dl class="spec">
+        <div><dt>Role</dt><dd>Full-stack development</dd></div>
+        <div><dt>Type</dt><dd>Product catalog · Flask</dd></div>
+        <div><dt>Status</dt><dd>In development</dd></div>
+      </dl>
+
+      <ul class="chips">
+        <li>Python &amp; Flask</li>
+        <li>JSON-driven catalog</li>
+        <li>WhatsApp contact</li>
+        <li>Environmental policy page</li>
       </ul>
 
       <p class="case__note">Simplified recreation above, not the live site — scroll or use

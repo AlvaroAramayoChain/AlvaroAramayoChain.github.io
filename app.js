@@ -289,12 +289,9 @@ if (!REDUCED && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
   });
 }
 
-/* ── 5. site preview demo — sample copy only, browsable in place ── */
+/* ── 5. site preview demos — sample copy only, browsable in place ── */
 
-(function siteDemo() {
-  const demo = document.getElementById('siteDemo');
-  if (!demo) return;
-
+document.querySelectorAll('.demo').forEach((demo) => {
   const scroller = demo.querySelector('.demo__scroll');
   if (!scroller) return;
 
@@ -304,7 +301,7 @@ if (!REDUCED && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
       if (target) scroller.scrollTo({ top: target.offsetTop - 6, behavior: 'smooth' });
     });
   });
-})();
+});
 
 /* ── 6. scroll fx: progress bar + parallax background ──────
    The progress bar tracks the user's own scroll (kept even under
