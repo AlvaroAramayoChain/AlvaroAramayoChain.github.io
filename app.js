@@ -3,6 +3,8 @@
    1. Nav state
    2. Scroll reveals
    3. Hero: 3D slot lattice (hand-rolled renderer, no libraries)
+   4. Pointer-driven 3D tilt on cards
+   5. Booking demo (sample data only)
    ============================================================ */
 
 const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -257,4 +259,52 @@ if (REDUCED || !('IntersectionObserver' in window)) {
 
   started = performance.now();
   raf = requestAnimationFrame(draw);
+})();
+
+/* ── 4. pointer-driven 3D tilt ──────────────────────────────
+   Cards marked [data-tilt="<strength>"] tip toward the pointer.
+   Skipped entirely on touch/coarse pointers and reduced motion. */
+
+if (!REDUCED && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+  document.querySelectorAll('[data-tilt]').forEach((el) => {
+    const strength = parseFloat(el.dataset.tilt) || 8;
+    let rect = null;
+
+    el.addEventListener('pointerenter', () => { rect = el.getBoundingClientRect(); });
+
+    el.addEventListener('pointermove', (e) => {
+      if (!rect) rect = el.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      el.style.setProperty('--ry', (px * strength).toFixed(2) + 'deg');
+      el.style.setProperty('--rx', (py * -strength).toFixed(2) + 'deg');
+    });
+
+    el.addEventListener('pointerleave', () => {
+      rect = null;
+      el.style.setProperty('--rx', '0deg');
+      el.style.setProperty('--ry', '0deg');
+    });
+  });
+}
+
+/* ── 5. booking demo — sample data only, resets on its own ── */
+
+(function bookingDemo() {
+  const demo = document.getElementById('bookingDemo');
+  if (!demo) return;
+
+  const timeOut = demo.querySelector('[data-demo-time]');
+
+  demo.querySelectorAll('.demo__slot:not(.demo__slot--taken)').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (timeOut) timeOut.textContent = btn.dataset.time;
+      demo.classList.add('is-flipped');
+    });
+  });
+
+  const reset = demo.querySelector('.demo__reset');
+  if (reset) {
+    reset.addEventListener('click', () => demo.classList.remove('is-flipped'));
+  }
 })();
