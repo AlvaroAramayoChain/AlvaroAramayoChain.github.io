@@ -22,6 +22,15 @@
 </head>
 <body>
 
+<div class="bg-fx" id="bgFx" aria-hidden="true">
+  <span class="bg-fx__blob bg-fx__blob--a"></span>
+  <span class="bg-fx__blob bg-fx__blob--b"></span>
+  <span class="bg-fx__blob bg-fx__blob--c"></span>
+</div>
+<div class="edge-fx edge-fx--left" aria-hidden="true"></div>
+<div class="edge-fx edge-fx--right" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
 <a class="skip" href="#about">Skip to content</a>
 
 <header class="nav">
@@ -46,13 +55,13 @@
     <p class="eyebrow hero__eyebrow"><span>Web developer</span> · Argentina</p>
 
     <h1 class="hero__title">
-      <span class="line"><span>I build the software</span></span>
-      <span class="line"><span>that keeps small</span></span>
-      <span class="line"><span>businesses <em>booked</em>.</span></span>
+      <span class="line"><span>I build institutional</span></span>
+      <span class="line"><span>websites, functional sites</span></span>
+      <span class="line"><span>and <em>web applications</em>.</span></span>
     </h1>
 
-    <p class="hero__sub">Websites and web applications — with the reminders,
-      confirmations and follow-ups wired in.</p>
+    <p class="hero__sub">Designed, built and shipped end to end — from the
+      first line of backend code to the interface a client actually uses.</p>
 
     <div class="hero__actions">
       <a class="btn btn--solid" href="#work">See the work</a>
@@ -61,8 +70,8 @@
   </div>
 
   <div class="hero__legend" aria-hidden="true">
-    <span class="key key--open"></span> free slot
-    <span class="key key--booked"></span> booked
+    <span class="key key--open"></span> idle
+    <span class="key key--booked"></span> active
   </div>
 </section>
 
@@ -126,7 +135,7 @@
 
 <!-- ───────────────────────── WORK ───────────────────────── -->
 <section class="section work" id="work">
-  <p class="eyebrow reveal">Selected work</p>
+  <p class="eyebrow reveal">An example of the projects I build</p>
   <h2 class="h2 work__head reveal" style="--d:.05s">One product, built end to end.</h2>
 
   <article class="case reveal reveal--tilt" style="--d:.10s">
@@ -259,29 +268,29 @@
     <div class="stack__group reveal" style="--d:.08s" data-tilt="4">
       <h3>Write</h3>
       <ul class="tools">
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.5h5a3 3 0 0 1 3 3v3h-8a3 3 0 0 0-3 3v2.5"/><path d="M16 20.5h-5a3 3 0 0 1-3-3v-3h8a3 3 0 0 0 3-3V9"/><circle cx="9.3" cy="6.3" r=".85" fill="currentColor" stroke="none"/><circle cx="14.7" cy="17.7" r=".85" fill="currentColor" stroke="none"/></svg></span>
+        <li class="tool" style="--brand:#3776AB">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128"><linearGradient id="python-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/></linearGradient><linearGradient id="python-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient><path fill="url(#python-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"/><path fill="url(#python-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"/></svg></span>
           <span class="tool__label">Python</span>
         </li>
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4c-2.2 0-2.4 1.4-2.4 2.9v1.8c0 1.1-.5 1.8-1.9 1.8v2c1.4 0 1.9.7 1.9 1.8v1.8c0 1.5.2 2.9 2.4 2.9"/><path d="M15 4c2.2 0 2.4 1.4 2.4 2.9v1.8c0 1.1.5 1.8 1.9 1.8v2c-1.4 0-1.9.7-1.9 1.8v1.8c0 1.5-.2 2.9-2.4 2.9"/></svg></span>
+        <li class="tool" style="--brand:#F0DB4F">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/></svg></span>
           <span class="tool__label">JavaScript</span>
         </li>
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg></span>
-          <span class="tool__label">HTML</span>
+        <li class="tool" style="--brand:#E44D26">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128"><path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z"/><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z"/><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z"/><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/></svg></span>
+          <span class="tool__label">HTML5</span>
         </li>
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v5M4 6.5h4M15.5 4v5M13.5 6.5h4M9 14v6M6 17h6M17 14v6M14.5 15.5h5M14.5 18.5h5"/></svg></span>
-          <span class="tool__label">CSS</span>
+        <li class="tool" style="--brand:#1572B6">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128"><path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"/><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"/><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z"/><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z"/><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"/><path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z"/></svg></span>
+          <span class="tool__label">CSS3</span>
         </li>
       </ul>
     </div>
     <div class="stack__group reveal" style="--d:.12s" data-tilt="4">
       <h3>Store</h3>
       <ul class="tools">
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c4.4 0 8 1.12 8 2.5S16.4 10 12 10 4 8.88 4 7.5 7.6 5 12 5z"/><path d="M4 7.5V12c0 1.38 3.6 2.5 8 2.5s8-1.12 8-2.5V7.5"/><path d="M4 12v4.5c0 1.38 3.6 2.5 8 2.5s8-1.12 8-2.5V12"/></svg></span>
+        <li class="tool" style="--brand:#0EA5A5">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0EA5A5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c4.4 0 8 1.12 8 2.5S16.4 10 12 10 4 8.88 4 7.5 7.6 5 12 5z"/><path d="M4 7.5V12c0 1.38 3.6 2.5 8 2.5s8-1.12 8-2.5V7.5"/><path d="M4 12v4.5c0 1.38 3.6 2.5 8 2.5s8-1.12 8-2.5V12"/></svg></span>
           <span class="tool__label">SQL</span>
         </li>
       </ul>
@@ -289,12 +298,12 @@
     <div class="stack__group reveal" style="--d:.16s" data-tilt="4">
       <h3>Run</h3>
       <ul class="tools">
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M7 10.2l2.6 1.8-2.6 1.8M12 14h5"/></svg></span>
+        <li class="tool" style="--brand:#f7c000">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128" fill="#0B0E1A"><path fill-rule="evenodd" clip-rule="evenodd" d="M113.823 104.595c-1.795-1.478-3.629-2.921-5.308-4.525-1.87-1.785-3.045-3.944-2.789-6.678.147-1.573-.216-2.926-2.113-3.452.446-1.154.864-1.928 1.033-2.753.188-.92.178-1.887.204-2.834.264-9.96-3.334-18.691-8.663-26.835-2.454-3.748-5.017-7.429-7.633-11.066-4.092-5.688-5.559-12.078-5.633-18.981a47.564 47.564 0 00-1.081-9.475C80.527 11.956 77.291 7.233 71.422 4.7c-4.497-1.942-9.152-2.327-13.901-1.084-6.901 1.805-11.074 6.934-10.996 14.088.074 6.885.417 13.779.922 20.648.288 3.893-.312 7.252-2.895 10.34-2.484 2.969-4.706 6.172-6.858 9.397-1.229 1.844-2.317 3.853-3.077 5.931-2.07 5.663-3.973 11.373-7.276 16.5-1.224 1.9-1.363 4.026-.494 6.199.225.563.363 1.429.089 1.882-2.354 3.907-5.011 7.345-10.066 8.095-3.976.591-4.172 1.314-4.051 5.413.1 3.337.061 6.705-.28 10.021-.363 3.555.008 4.521 3.442 5.373 7.924 1.968 15.913 3.647 23.492 6.854 3.227 1.365 6.465.891 9.064-1.763 2.713-2.771 6.141-3.855 9.844-3.859 6.285-.005 12.572.298 18.86.369 1.702.02 2.679.653 3.364 2.199.84 1.893 2.26 3.284 4.445 3.526 4.193.462 8.013-.16 11.19-3.359 3.918-3.948 8.436-7.066 13.615-9.227 1.482-.619 2.878-1.592 4.103-2.648 2.231-1.922 2.113-3.146-.135-5zM62.426 24.12c.758-2.601 2.537-4.289 5.243-4.801 2.276-.43 4.203.688 5.639 3.246 1.546 2.758 2.054 5.64.734 8.658-1.083 2.474-1.591 2.707-4.123 1.868-.474-.157-.937-.343-1.777-.652.708-.594 1.154-1.035 1.664-1.382 1.134-.772 1.452-1.858 1.346-3.148-.139-1.694-1.471-3.194-2.837-3.175-1.225.017-2.262 1.167-2.4 2.915-.086 1.089.095 2.199.173 3.589-3.446-1.023-4.711-3.525-3.662-7.118zm-12.75-2.251c1.274-1.928 3.197-2.314 5.101-1.024 2.029 1.376 3.547 5.256 2.763 7.576-.285.844-1.127 1.5-1.716 2.241l-.604-.374c-.23-1.253-.276-2.585-.757-3.733-.304-.728-1.257-1.184-1.919-1.762-.622.739-1.693 1.443-1.757 2.228-.088 1.084.477 2.28.969 3.331.311.661 1.001 1.145 1.713 1.916l-1.922 1.51c-3.018-2.7-3.915-8.82-1.871-11.909zM87.34 86.075c-.203 2.604-.5 2.713-3.118 3.098-1.859.272-2.359.756-2.453 2.964a101.744 101.744 0 00-.012 7.753c.061 1.77-.537 3.158-1.755 4.393-6.764 6.856-14.845 10.105-24.512 8.926-4.17-.509-6.896-3.047-9.097-6.639.98-.363 1.705-.607 2.412-.894 3.122-1.27 3.706-3.955 1.213-6.277-1.884-1.757-3.986-3.283-6.007-4.892-1.954-1.555-3.934-3.078-5.891-4.629-1.668-1.323-2.305-3.028-2.345-5.188-.094-5.182.972-10.03 3.138-14.747 1.932-4.209 3.429-8.617 5.239-12.885.935-2.202 1.906-4.455 3.278-6.388 1.319-1.854 2.134-3.669 1.988-5.94-.084-1.276-.016-2.562-.016-3.843l.707-.352c1.141.985 2.302 1.949 3.423 2.959 4.045 3.646 7.892 3.813 12.319.67 1.888-1.341 3.93-2.47 5.927-3.652.497-.294 1.092-.423 1.934-.738 2.151 5.066 4.262 10.033 6.375 15 1.072 2.524 1.932 5.167 3.264 7.547 2.671 4.775 4.092 9.813 4.07 15.272-.012 2.83.137 5.67-.081 8.482z"/></svg></span>
           <span class="tool__label">Linux</span>
         </li>
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></svg></span>
+        <li class="tool" style="--brand:#1B6BB0">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" fill="#183A61"/><path d="M4 7.5 12 12l8-4.5" stroke="#0B0E1A" stroke-width=".6"/><path d="M12 12v9" stroke="#0B0E1A" stroke-width=".6"/><path d="M12 3l8 4.5-8 4.5-8-4.5L12 3z" fill="#1B6BB0"/></svg></span>
           <span class="tool__label">VirtualBox</span>
         </li>
       </ul>
@@ -302,20 +311,20 @@
     <div class="stack__group reveal" style="--d:.20s" data-tilt="4">
       <h3>Ship</h3>
       <ul class="tools">
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="1.4"/><rect x="4" y="14" width="16" height="6" rx="1.4"/><circle cx="7.6" cy="7" r=".8" fill="currentColor" stroke="none"/><circle cx="7.6" cy="17" r=".8" fill="currentColor" stroke="none"/></svg></span>
+        <li class="tool" style="--brand:#7C6BF5">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#7C6BF5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="1.4"/><rect x="4" y="14" width="16" height="6" rx="1.4"/><circle cx="7.6" cy="7" r=".8" fill="#7C6BF5" stroke="none"/><circle cx="7.6" cy="17" r=".8" fill="#7C6BF5" stroke="none"/></svg></span>
           <span class="tool__label">Hosting management</span>
         </li>
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 15V4M8 4 4.5 7.5M8 4l3.5 3.5"/><path d="M16 9v11M16 20l3.5-3.5M16 20l-3.5-3.5"/></svg></span>
+        <li class="tool" style="--brand:#BF0000">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient id="fz-a" x1="187.947" x2="187.947" y1="123.859" y2="258.865" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#bf0000"/><stop offset="1" stop-color="#8f0000"/></linearGradient><linearGradient xlink:href="#fz-a" id="fz-b" x1="187.947" x2="187.947" y1="123.859" y2="258.865" gradientTransform="matrix(.73244 0 0 .73242 -73.663 -75.173)" gradientUnits="userSpaceOnUse"/></defs><path fill="url(#fz-b)" d="M0 4.286v5.65a4.29 4.29 0 0 1 4.286 4.286A4.29 4.29 0 0 1 0 18.508v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 32.729v5.65a4.291 4.291 0 0 1 4.286 4.288A4.291 4.291 0 0 1 0 46.955v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 61.176v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 75.398v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 89.619v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 103.84v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 118.062v5.653a4.31 4.31 0 0 1 3.03 1.255A4.315 4.315 0 0 1 4.287 128h5.65a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 18.507 128h5.651a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 32.729 128h5.65a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 46.951 128h5.65a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 61.173 128h5.65a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 75.395 128h5.65a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 89.616 128h5.651a4.29 4.29 0 0 1 4.286-4.285 4.29 4.29 0 0 1 4.285 4.285h5.651a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 118.06 128h5.654a4.31 4.31 0 0 1 1.256-3.03 4.31 4.31 0 0 1 3.03-1.255v-5.65a4.29 4.29 0 0 1-4.286-4.287 4.29 4.29 0 0 1 4.286-4.284v-5.65a4.29 4.29 0 0 1-4.286-4.287A4.29 4.29 0 0 1 128 95.272v-5.65a4.29 4.29 0 0 1-4.286-4.286A4.29 4.29 0 0 1 128 81.05V75.4a4.29 4.29 0 0 1-4.286-4.287A4.29 4.29 0 0 1 128 66.83v-5.65a4.29 4.29 0 0 1-4.286-4.287A4.29 4.29 0 0 1 128 52.608v-5.65a4.291 4.291 0 0 1-4.286-4.288A4.291 4.291 0 0 1 128 38.383v-5.651a4.29 4.29 0 0 1-4.286-4.286A4.29 4.29 0 0 1 128 24.16v-5.65a4.29 4.29 0 0 1-4.286-4.286A4.29 4.29 0 0 1 128 9.94V4.286a4.315 4.315 0 0 1-3.03-1.254A4.316 4.316 0 0 1 123.714 0h-5.651a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 109.492 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 95.27 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 81.048 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 66.826 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 52.605 0h-5.651a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 38.383 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 24.16 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 9.939 0H4.286A4.321 4.321 0 0 1 3.03 3.032 4.32 4.32 0 0 1 0 4.286Z"/><path fill="#fff" d="M109.04 51.217H45.167l3.334-15.596h38.93L91 18.836H35.047l-17.62 83.096h16.906l7.737-36.31h40.549l-35.234 34.88 6.19 10.952c2.857-1.904 7.5-2.143 10.714-2.143 5.716 0 11.31 1.906 17.142 1.906 5.348 0 10.822-.357 19.752-4.643l3.12-14.643c-6.072 2.5-15.057 4.881-22.872 4.881-3.212 0-6.189-.714-9.284-1.19l34.154-33.214z"/></svg></span>
           <span class="tool__label">FileZilla · FTP</span>
         </li>
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="9" r="2"/><path d="M6 8v8M6 13c0-2.8 2.2-5 5-5h4"/></svg></span>
+        <li class="tool" style="--brand:#F05033">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128"><path fill="#F05033" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"/></svg></span>
           <span class="tool__label">Git</span>
         </li>
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6z"/><path d="M9 15v-2a2 2 0 0 1 2-2h2"/><circle cx="9" cy="17" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="11" r="1" fill="currentColor" stroke="none"/></svg></span>
+        <li class="tool" style="--brand:#ffffff">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128"><g fill="#181616"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/></g></svg></span>
           <span class="tool__label">GitHub</span>
         </li>
       </ul>
@@ -323,8 +332,8 @@
     <div class="stack__group reveal" style="--d:.24s" data-tilt="4">
       <h3>Assist</h3>
       <ul class="tools">
-        <li class="tool">
-          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 3c.65 3.55 2.6 5.5 6.15 6.15C14.6 9.8 12.65 11.75 12 15.3c-.65-3.55-2.6-5.5-6.15-6.15C9.4 8.5 11.35 6.55 12 3z"/></svg></span>
+        <li class="tool" style="--brand:#DA7756">
+          <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#DA7756" stroke="none"><path d="M12 2c.85 4.7 3.45 7.3 8.15 8.15C15.45 10.85 12.85 13.45 12 18.15c-.85-4.7-3.45-7.3-8.15-8.15C8.55 9.3 11.15 6.7 12 2z"/></svg></span>
           <span class="tool__label">Claude</span>
         </li>
       </ul>
@@ -339,10 +348,12 @@
 
   <div class="contact__links">
     <a class="clink reveal reveal--tilt" style="--d:.10s" href="mailto:alvaroaramayochain123@gmail.com">
+      <span class="clink__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.4"/><path d="m4 7 8 6 8-6"/></svg></span>
       <span class="clink__label">Email</span>
       <span class="clink__value">alvaroaramayochain123@gmail.com</span>
     </a>
     <a class="clink reveal reveal--tilt" style="--d:.14s" href="https://github.com/AlvaroAramayoChain" target="_blank" rel="noopener">
+      <span class="clink__icon" aria-hidden="true"><svg viewBox="0 0 128 128"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/></svg></span>
       <span class="clink__label">GitHub</span>
       <span class="clink__value">@AlvaroAramayoChain</span>
     </a>

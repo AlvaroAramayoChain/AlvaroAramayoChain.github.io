@@ -5,6 +5,7 @@
    3. Hero: 3D slot lattice (hand-rolled renderer, no libraries)
    4. Pointer-driven 3D tilt on cards
    5. Booking demo (sample data only)
+   6. Scroll fx: progress bar + parallax background
    ============================================================ */
 
 const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -303,4 +304,35 @@ if (!REDUCED && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
       if (target) scroller.scrollTo({ top: target.offsetTop - 6, behavior: 'smooth' });
     });
   });
+})();
+
+/* ── 6. scroll fx: progress bar + parallax background ──────
+   The progress bar tracks the user's own scroll (kept even under
+   reduced motion — it doesn't move on its own). The background
+   parallax shift is pure decoration, so it's skipped under
+   reduced motion instead of just slowed down. */
+
+(function scrollFx() {
+  const bar = document.getElementById('scrollProgress');
+  const bg = document.getElementById('bgFx');
+  if (!bar && !bg) return;
+
+  let ticking = false;
+
+  function update() {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    const p = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+
+    if (bar) bar.style.transform = `scaleX(${p})`;
+    if (bg && !REDUCED) bg.style.setProperty('--shift', (window.scrollY * -0.06).toFixed(1) + 'px');
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+
+  update();
 })();
