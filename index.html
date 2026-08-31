@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-root>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,101 +31,105 @@
 <div class="edge-fx edge-fx--right" aria-hidden="true"></div>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<a class="skip" href="#about">Skip to content</a>
+<a class="skip" href="#about" data-i18n="skip">Skip to content</a>
 
 <header class="nav">
-  <a class="nav__mark" href="#top" aria-label="Back to top">
+  <a class="nav__mark" href="#top" aria-label="Back to top" data-i18n-aria="nav.top">
     <span class="nav__slab" aria-hidden="true"></span>
-    AAC
+    <span class="nav__mark-text" data-i18n="nav.mark">Portfolio — Alvaro Aramayo Chain</span>
   </a>
-  <nav class="nav__links" aria-label="Sections">
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#toolkit">Toolkit</a>
-    <a href="#contact">Contact</a>
+  <nav class="nav__links" aria-label="Sections" data-i18n-aria="nav.sections">
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#work" data-i18n="nav.work">Work</a>
+    <a href="#toolkit" data-i18n="nav.toolkit">Toolkit</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
   </nav>
+
+  <div class="lang" role="group" aria-label="Language" data-i18n-aria="nav.language">
+    <button type="button" class="lang__btn" data-lang="es" aria-pressed="false" data-i18n-aria="nav.langEs" aria-label="Cambiar a espanol">ES</button>
+    <button type="button" class="lang__btn" data-lang="en" aria-pressed="true" data-i18n-aria="nav.langEn" aria-label="Switch to English">EN</button>
+  </div>
 </header>
 
 <!-- ───────────────────────── HERO ───────────────────────── -->
 <section class="hero" id="top">
-  <canvas class="lattice" id="lattice" aria-hidden="true"></canvas>
+  <div class="hero__abstract" aria-hidden="true">
+    <span class="hero__shape hero__shape--ring"></span>
+    <span class="hero__shape hero__shape--slab"></span>
+    <span class="hero__shape hero__shape--dot"></span>
+    <span class="hero__shape hero__shape--grid"></span>
+    <span class="hero__shape hero__shape--line"></span>
+  </div>
   <div class="hero__veil" aria-hidden="true"></div>
 
   <div class="hero__inner">
-    <p class="eyebrow hero__eyebrow"><span>Web developer</span> · Argentina</p>
-
     <h1 class="hero__title">
-      <span class="line"><span>I build institutional</span></span>
-      <span class="line"><span>websites, functional sites</span></span>
-      <span class="line"><span>and <em>web applications</em>.</span></span>
+      <span class="line"><span data-i18n-html="hero.l1">I build institutional</span></span>
+      <span class="line"><span data-i18n-html="hero.l2">websites, functional sites</span></span>
+      <span class="line"><span data-i18n-html="hero.l3">and <em>web applications</em>.</span></span>
     </h1>
 
-    <p class="hero__sub">Designed, built and shipped end to end — from the
+    <p class="hero__sub" data-i18n="hero.sub">Designed, built and shipped end to end — from the
       first line of backend code to the interface a client actually uses.</p>
 
     <div class="hero__actions">
-      <a class="btn btn--solid" href="#work">See the work</a>
-      <a class="btn btn--ghost" href="mailto:alvaroaramayochain123@gmail.com">Get in touch</a>
+      <a class="btn btn--solid" href="#work" data-i18n="hero.cta1">See the work</a>
+      <a class="btn btn--ghost" href="mailto:alvaroaramayochain123@gmail.com" data-i18n="hero.cta2">Get in touch</a>
     </div>
-  </div>
-
-  <div class="hero__legend" aria-hidden="true">
-    <span class="key key--open"></span> idle
-    <span class="key key--booked"></span> active
   </div>
 </section>
 
 <!-- ───────────────────────── ABOUT ───────────────────────── -->
 <section class="section about" id="about">
-  <p class="eyebrow reveal">About</p>
+  <p class="eyebrow reveal" data-i18n="about.eyebrow">About</p>
 
   <div class="about__grid">
     <figure class="portrait reveal" data-tilt="6">
       <span class="portrait__ring" aria-hidden="true"></span>
-      <img src="assets/alvaro.jpg" alt="Portrait of Alvaro Aramayo Chain" width="880" height="1100" loading="lazy">
+      <img src="assets/alvaro.jpg" alt="Portrait of Alvaro Aramayo Chain" data-i18n-alt="about.portraitAlt" width="880" height="1100" loading="lazy">
       <figcaption>Alvaro Aramayo Chain</figcaption>
     </figure>
 
     <div class="about__body">
-      <h2 class="h2 reveal">Hi, I'm Alvaro. I make web products that hold up
+      <h2 class="h2 reveal" data-i18n="about.h2">Hi, I'm Alvaro. I make web products that hold up
         once real customers start using them.</h2>
 
-      <p class="lede reveal" style="--d:.06s">Most of my work sits where a website stops being a
+      <p class="lede reveal" style="--d:.06s" data-i18n="about.p1">Most of my work sits where a website stops being a
         brochure and starts doing a job — taking a booking, sending the confirmation,
         remembering to follow up. I care about the boring parts: clean data, sane
         backend structure, nothing that falls over on a busy Saturday.</p>
 
-      <p class="lede reveal" style="--d:.09s">I usually work the whole flow solo: scope it out with
+      <p class="lede reveal" style="--d:.09s" data-i18n="about.p2">I usually work the whole flow solo: scope it out with
         whoever's asking, build the backend and the interface, wire up WhatsApp and email so
         nothing gets forgotten, and stay close after launch to fix what actually breaks —
         not just what looks broken. Studying cybersecurity alongside that pushes me to default
         to systems that are hardened from the start, instead of patched after something goes wrong.</p>
 
       <ul class="facts">
-        <li class="reveal" style="--d:.10s"><span>Focus</span> Websites and web applications</li>
-        <li class="reveal" style="--d:.14s"><span>Integrations</span> WhatsApp and email</li>
-        <li class="reveal" style="--d:.18s"><span>Practice</span> Backend best practices</li>
-        <li class="reveal" style="--d:.22s"><span>Studying</span> Cybersecurity</li>
-        <li class="reveal" style="--d:.26s"><span>Based in</span> Argentina · works remotely</li>
+        <li class="reveal" style="--d:.10s" data-i18n-html="about.f1"><span>Focus</span> Websites and web applications</li>
+        <li class="reveal" style="--d:.14s" data-i18n-html="about.f2"><span>Integrations</span> WhatsApp and email</li>
+        <li class="reveal" style="--d:.18s" data-i18n-html="about.f3"><span>Practice</span> Backend best practices</li>
+        <li class="reveal" style="--d:.22s" data-i18n-html="about.f4"><span>Studying</span> Cybersecurity</li>
+        <li class="reveal" style="--d:.26s" data-i18n-html="about.f5"><span>Based in</span> Argentina · works remotely</li>
       </ul>
 
       <ul class="highlights">
         <li class="highlight reveal" style="--d:.10s" data-tilt="8">
           <span class="highlight__num">01</span>
-          <h3>End to end</h3>
-          <p>One person across backend, interface and integrations — fewer handoffs, fewer
+          <h3 data-i18n="about.h1t">End to end</h3>
+          <p data-i18n="about.h1d">One person across backend, interface and integrations — fewer handoffs, fewer
             things lost in translation.</p>
         </li>
         <li class="highlight reveal" style="--d:.16s" data-tilt="8">
           <span class="highlight__num">02</span>
-          <h3>Automation-minded</h3>
-          <p>If a step repeats — a reminder, a confirmation, a follow-up — it belongs in the
+          <h3 data-i18n="about.h2t">Automation-minded</h3>
+          <p data-i18n="about.h2d">If a step repeats — a reminder, a confirmation, a follow-up — it belongs in the
             system, not on someone's to-do list.</p>
         </li>
         <li class="highlight reveal" style="--d:.22s" data-tilt="8">
           <span class="highlight__num">03</span>
-          <h3>Security-aware</h3>
-          <p>Cybersecurity study feeds back into the day job: data handled carefully by
+          <h3 data-i18n="about.h3t">Security-aware</h3>
+          <p data-i18n="about.h3d">Cybersecurity study feeds back into the day job: data handled carefully by
             default, not as an afterthought.</p>
         </li>
       </ul>
@@ -135,8 +139,8 @@
 
 <!-- ───────────────────────── WORK ───────────────────────── -->
 <section class="section work" id="work">
-  <p class="eyebrow reveal">An example of the projects I build</p>
-  <h2 class="h2 work__head reveal" style="--d:.05s">Real products, built end to end.</h2>
+  <p class="eyebrow reveal" data-i18n="work.eyebrow">An example of the projects I build</p>
+  <h2 class="h2 work__head reveal" style="--d:.05s" data-i18n="work.h2">Real products, built end to end.</h2>
 
   <article class="case reveal reveal--tilt" style="--d:.10s">
     <div class="case__frame" data-tilt="5">
@@ -233,26 +237,34 @@
     </div>
 
     <div class="case__meta">
-      <h3 class="case__title">Salta Sistemas — corporate website</h3>
-      <p class="case__what">The institutional website for an IT services company in
+      <h3 class="case__title" data-i18n="case1.title">Salta Sistemas — corporate website</h3>
+      <p class="case__what" data-i18n="case1.what">The institutional website for an IT services company in
         Salta, Argentina — service catalog, completed-work portfolio and a contact
         form, backed by a content-managed admin panel instead of hard-coded pages.</p>
 
       <dl class="spec">
-        <div><dt>Role</dt><dd>Full-stack development</dd></div>
-        <div><dt>Type</dt><dd>Institutional website · Django</dd></div>
-        <div><dt>Status</dt><dd>Completed</dd></div>
+        <div><dt data-i18n="spec.role">Role</dt><dd data-i18n="case1.role">Full-stack development</dd></div>
+        <div><dt data-i18n="spec.type">Type</dt><dd data-i18n="case1.type">Institutional website · Django</dd></div>
+        <div><dt data-i18n="spec.status">Status</dt><dd data-i18n="case1.status">Completed</dd></div>
       </dl>
 
       <ul class="chips">
-        <li>Python &amp; Django</li>
-        <li>Content-managed via admin</li>
-        <li>SEO &amp; sitemap</li>
-        <li>Contact form</li>
-        <li>Ticketing module ready</li>
+        <li data-i18n="case1.c1">Python &amp; Django</li>
+        <li data-i18n="case1.c2">Content-managed via admin</li>
+        <li data-i18n="case1.c3">SEO &amp; sitemap</li>
+        <li data-i18n="case1.c4">Contact form</li>
+        <li data-i18n="case1.c5">Ticketing module ready</li>
       </ul>
 
-      <p class="case__note">Simplified recreation above, not the live site — scroll or use
+      <p class="case__live">
+        <a class="livelink" href="https://saltasistemas.com.ar" target="_blank" rel="noopener">
+          <span class="livelink__dot" aria-hidden="true"></span>
+          <span data-i18n="case1.live">Visit the live site</span>
+          <span class="livelink__url">saltasistemas.com.ar ↗</span>
+        </a>
+      </p>
+
+      <p class="case__note" data-i18n="case1.note">Simplified recreation above, not the live site — scroll or use
         its nav to browse the page. Runs entirely in your browser with generic sample
         copy; no real client names, contact details or business data shown anywhere.</p>
     </div>
@@ -335,31 +347,73 @@
     </div>
 
     <div class="case__meta">
-      <h3 class="case__title">mochec — agrochemical product site</h3>
-      <p class="case__what">A product catalog and institutional site for an agrochemical
+      <h3 class="case__title" data-i18n="case2.title">mochec — agrochemical product site</h3>
+      <p class="case__what" data-i18n="case2.what">A product catalog and institutional site for an agrochemical
         company — plant-nutrition formulations, an environmental policy page, and a
         WhatsApp-first contact flow instead of online checkout.</p>
 
       <dl class="spec">
-        <div><dt>Role</dt><dd>Full-stack development</dd></div>
-        <div><dt>Type</dt><dd>Product catalog · Flask</dd></div>
-        <div><dt>Status</dt><dd>In development</dd></div>
+        <div><dt data-i18n="spec.role">Role</dt><dd data-i18n="case2.role">Full-stack development</dd></div>
+        <div><dt data-i18n="spec.type">Type</dt><dd data-i18n="case2.type">Product catalog · Flask</dd></div>
+        <div><dt data-i18n="spec.status">Status</dt><dd data-i18n="case2.status">In development</dd></div>
       </dl>
 
       <ul class="chips">
-        <li>Python &amp; Flask</li>
-        <li>JSON-driven catalog</li>
-        <li>WhatsApp contact</li>
-        <li>Environmental policy page</li>
+        <li data-i18n="case2.c1">Python &amp; Flask</li>
+        <li data-i18n="case2.c2">JSON-driven catalog</li>
+        <li data-i18n="case2.c3">WhatsApp contact</li>
+        <li data-i18n="case2.c4">Environmental policy page</li>
       </ul>
 
-      <p class="case__note">Simplified recreation above, not the live site — scroll or use
+      <p class="case__note" data-i18n="case2.note">Simplified recreation above, not the live site — scroll or use
         its nav to browse the page. Runs entirely in your browser with generic sample
         copy; no real client names, contact details or business data shown anywhere.</p>
     </div>
   </article>
 
   <article class="case reveal reveal--tilt" style="--d:.18s">
+    <div class="case__frame" data-tilt="5">
+      <div class="case__chrome" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="case__url">condorseguridad.com.ar</span>
+      </div>
+
+      <a class="case__shotlink" href="https://condorseguridad.com.ar/" target="_blank" rel="noopener" aria-label="Open condorseguridad.com.ar in a new tab">
+        <img class="case__shot" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcondorseguridad.com.ar%2F?w=1200&amp;h=900" alt="Screenshot of the Condor Seguridad S.A.S. homepage" data-i18n-alt="case3.shotAlt" loading="lazy" width="1200" height="900">
+      </a>
+    </div>
+
+    <div class="case__meta">
+      <h3 class="case__title" data-i18n="case3.title">Condor Seguridad — private security company website</h3>
+      <p class="case__what" data-i18n="case3.what">The corporate website for Condor Seguridad S.A.S., a private
+        security firm based in the Puna region of Salta, Argentina — presenting its
+        services (surveillance, armed escort, cargo and asset protection) and putting
+        the company in front of the mining operations it works with.</p>
+
+      <dl class="spec">
+        <div><dt data-i18n="spec.role">Role</dt><dd data-i18n="case3.role">Full-stack development</dd></div>
+        <div><dt data-i18n="spec.type">Type</dt><dd data-i18n="case3.type">Institutional website</dd></div>
+        <div><dt data-i18n="spec.status">Status</dt><dd data-i18n="case3.status">Completed</dd></div>
+      </dl>
+
+      <ul class="chips">
+        <li data-i18n="case3.c1">Institutional website</li>
+        <li data-i18n="case3.c2">Service catalog</li>
+        <li data-i18n="case3.c3">Contact form</li>
+        <li data-i18n="case3.c4">Mobile-first</li>
+      </ul>
+
+      <p class="case__live">
+        <a class="livelink" href="https://condorseguridad.com.ar/" target="_blank" rel="noopener">
+          <span class="livelink__dot" aria-hidden="true"></span>
+          <span data-i18n="case1.live">Visit the live site</span>
+          <span class="livelink__url">condorseguridad.com.ar ↗</span>
+        </a>
+      </p>
+    </div>
+  </article>
+
+  <article class="case reveal reveal--tilt" style="--d:.22s">
     <div class="case__frame" data-tilt="5">
       <div class="case__chrome" aria-hidden="true">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -383,25 +437,25 @@
     </div>
 
     <div class="case__meta">
-      <h3 class="case__title">"Coming soon" placeholder page</h3>
-      <p class="case__what">A simple single-page site for a business whose real website
+      <h3 class="case__title" data-i18n="case4.title">"Coming soon" placeholder page</h3>
+      <p class="case__what" data-i18n="case4.what">A simple single-page site for a business whose real website
         isn't ready yet — a clear message and a way to get in touch, live in minutes
         instead of waiting on the full build.</p>
 
       <dl class="spec">
-        <div><dt>Role</dt><dd>Design &amp; development</dd></div>
-        <div><dt>Type</dt><dd>Single-page site</dd></div>
-        <div><dt>Status</dt><dd>Reusable template</dd></div>
+        <div><dt data-i18n="spec.role">Role</dt><dd data-i18n="case4.role">Design &amp; development</dd></div>
+        <div><dt data-i18n="spec.type">Type</dt><dd data-i18n="case4.type">Single-page site</dd></div>
+        <div><dt data-i18n="spec.status">Status</dt><dd data-i18n="case4.status">Reusable template</dd></div>
       </dl>
 
       <ul class="chips">
-        <li>Fast to deploy</li>
-        <li>Custom branding</li>
-        <li>Email capture</li>
-        <li>Mobile-first</li>
+        <li data-i18n="case4.c1">Fast to deploy</li>
+        <li data-i18n="case4.c2">Custom branding</li>
+        <li data-i18n="case4.c3">Email capture</li>
+        <li data-i18n="case4.c4">Mobile-first</li>
       </ul>
 
-      <p class="case__note">Demo only — the form doesn't send anywhere. Same idea I'd
+      <p class="case__note" data-i18n="case4.note">Demo only — the form doesn't send anywhere. Same idea I'd
         set up for any client: swap the name, colors and message and it's ready to go
         live while the full site gets built.</p>
     </div>
@@ -410,12 +464,12 @@
 
 <!-- ───────────────────────── TOOLKIT ───────────────────────── -->
 <section class="section toolkit" id="toolkit">
-  <p class="eyebrow reveal">Toolkit</p>
-  <h2 class="h2 reveal" style="--d:.05s">What I work with, grouped by what it's for.</h2>
+  <p class="eyebrow reveal" data-i18n="toolkit.eyebrow">Toolkit</p>
+  <h2 class="h2 reveal" style="--d:.05s" data-i18n="toolkit.h2">What I work with, grouped by what it's for.</h2>
 
   <div class="stack">
     <div class="stack__group reveal" style="--d:.08s" data-tilt="4">
-      <h3>Write</h3>
+      <h3 data-i18n="toolkit.write">Write</h3>
       <ul class="tools">
         <li class="tool" style="--brand:#3776AB">
           <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128"><linearGradient id="python-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/></linearGradient><linearGradient id="python-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient><path fill="url(#python-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"/><path fill="url(#python-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"/></svg></span>
@@ -436,7 +490,7 @@
       </ul>
     </div>
     <div class="stack__group reveal" style="--d:.12s" data-tilt="4">
-      <h3>Store</h3>
+      <h3 data-i18n="toolkit.store">Store</h3>
       <ul class="tools">
         <li class="tool" style="--brand:#0EA5A5">
           <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0EA5A5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c4.4 0 8 1.12 8 2.5S16.4 10 12 10 4 8.88 4 7.5 7.6 5 12 5z"/><path d="M4 7.5V12c0 1.38 3.6 2.5 8 2.5s8-1.12 8-2.5V7.5"/><path d="M4 12v4.5c0 1.38 3.6 2.5 8 2.5s8-1.12 8-2.5V12"/></svg></span>
@@ -445,7 +499,7 @@
       </ul>
     </div>
     <div class="stack__group reveal" style="--d:.16s" data-tilt="4">
-      <h3>Run</h3>
+      <h3 data-i18n="toolkit.run">Run</h3>
       <ul class="tools">
         <li class="tool" style="--brand:#f7c000">
           <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128" fill="#0B0E1A"><path fill-rule="evenodd" clip-rule="evenodd" d="M113.823 104.595c-1.795-1.478-3.629-2.921-5.308-4.525-1.87-1.785-3.045-3.944-2.789-6.678.147-1.573-.216-2.926-2.113-3.452.446-1.154.864-1.928 1.033-2.753.188-.92.178-1.887.204-2.834.264-9.96-3.334-18.691-8.663-26.835-2.454-3.748-5.017-7.429-7.633-11.066-4.092-5.688-5.559-12.078-5.633-18.981a47.564 47.564 0 00-1.081-9.475C80.527 11.956 77.291 7.233 71.422 4.7c-4.497-1.942-9.152-2.327-13.901-1.084-6.901 1.805-11.074 6.934-10.996 14.088.074 6.885.417 13.779.922 20.648.288 3.893-.312 7.252-2.895 10.34-2.484 2.969-4.706 6.172-6.858 9.397-1.229 1.844-2.317 3.853-3.077 5.931-2.07 5.663-3.973 11.373-7.276 16.5-1.224 1.9-1.363 4.026-.494 6.199.225.563.363 1.429.089 1.882-2.354 3.907-5.011 7.345-10.066 8.095-3.976.591-4.172 1.314-4.051 5.413.1 3.337.061 6.705-.28 10.021-.363 3.555.008 4.521 3.442 5.373 7.924 1.968 15.913 3.647 23.492 6.854 3.227 1.365 6.465.891 9.064-1.763 2.713-2.771 6.141-3.855 9.844-3.859 6.285-.005 12.572.298 18.86.369 1.702.02 2.679.653 3.364 2.199.84 1.893 2.26 3.284 4.445 3.526 4.193.462 8.013-.16 11.19-3.359 3.918-3.948 8.436-7.066 13.615-9.227 1.482-.619 2.878-1.592 4.103-2.648 2.231-1.922 2.113-3.146-.135-5zM62.426 24.12c.758-2.601 2.537-4.289 5.243-4.801 2.276-.43 4.203.688 5.639 3.246 1.546 2.758 2.054 5.64.734 8.658-1.083 2.474-1.591 2.707-4.123 1.868-.474-.157-.937-.343-1.777-.652.708-.594 1.154-1.035 1.664-1.382 1.134-.772 1.452-1.858 1.346-3.148-.139-1.694-1.471-3.194-2.837-3.175-1.225.017-2.262 1.167-2.4 2.915-.086 1.089.095 2.199.173 3.589-3.446-1.023-4.711-3.525-3.662-7.118zm-12.75-2.251c1.274-1.928 3.197-2.314 5.101-1.024 2.029 1.376 3.547 5.256 2.763 7.576-.285.844-1.127 1.5-1.716 2.241l-.604-.374c-.23-1.253-.276-2.585-.757-3.733-.304-.728-1.257-1.184-1.919-1.762-.622.739-1.693 1.443-1.757 2.228-.088 1.084.477 2.28.969 3.331.311.661 1.001 1.145 1.713 1.916l-1.922 1.51c-3.018-2.7-3.915-8.82-1.871-11.909zM87.34 86.075c-.203 2.604-.5 2.713-3.118 3.098-1.859.272-2.359.756-2.453 2.964a101.744 101.744 0 00-.012 7.753c.061 1.77-.537 3.158-1.755 4.393-6.764 6.856-14.845 10.105-24.512 8.926-4.17-.509-6.896-3.047-9.097-6.639.98-.363 1.705-.607 2.412-.894 3.122-1.27 3.706-3.955 1.213-6.277-1.884-1.757-3.986-3.283-6.007-4.892-1.954-1.555-3.934-3.078-5.891-4.629-1.668-1.323-2.305-3.028-2.345-5.188-.094-5.182.972-10.03 3.138-14.747 1.932-4.209 3.429-8.617 5.239-12.885.935-2.202 1.906-4.455 3.278-6.388 1.319-1.854 2.134-3.669 1.988-5.94-.084-1.276-.016-2.562-.016-3.843l.707-.352c1.141.985 2.302 1.949 3.423 2.959 4.045 3.646 7.892 3.813 12.319.67 1.888-1.341 3.93-2.47 5.927-3.652.497-.294 1.092-.423 1.934-.738 2.151 5.066 4.262 10.033 6.375 15 1.072 2.524 1.932 5.167 3.264 7.547 2.671 4.775 4.092 9.813 4.07 15.272-.012 2.83.137 5.67-.081 8.482z"/></svg></span>
@@ -458,11 +512,11 @@
       </ul>
     </div>
     <div class="stack__group reveal" style="--d:.20s" data-tilt="4">
-      <h3>Ship</h3>
+      <h3 data-i18n="toolkit.ship">Ship</h3>
       <ul class="tools">
         <li class="tool" style="--brand:#7C6BF5">
           <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#7C6BF5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="6" rx="1.4"/><rect x="4" y="14" width="16" height="6" rx="1.4"/><circle cx="7.6" cy="7" r=".8" fill="#7C6BF5" stroke="none"/><circle cx="7.6" cy="17" r=".8" fill="#7C6BF5" stroke="none"/></svg></span>
-          <span class="tool__label">Hosting management</span>
+          <span class="tool__label" data-i18n="toolkit.hosting">Hosting management</span>
         </li>
         <li class="tool" style="--brand:#BF0000">
           <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 128 128" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient id="fz-a" x1="187.947" x2="187.947" y1="123.859" y2="258.865" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#bf0000"/><stop offset="1" stop-color="#8f0000"/></linearGradient><linearGradient xlink:href="#fz-a" id="fz-b" x1="187.947" x2="187.947" y1="123.859" y2="258.865" gradientTransform="matrix(.73244 0 0 .73242 -73.663 -75.173)" gradientUnits="userSpaceOnUse"/></defs><path fill="url(#fz-b)" d="M0 4.286v5.65a4.29 4.29 0 0 1 4.286 4.286A4.29 4.29 0 0 1 0 18.508v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 32.729v5.65a4.291 4.291 0 0 1 4.286 4.288A4.291 4.291 0 0 1 0 46.955v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 61.176v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 75.398v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 89.619v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 103.84v5.65a4.29 4.29 0 0 1 4.286 4.285A4.29 4.29 0 0 1 0 118.062v5.653a4.31 4.31 0 0 1 3.03 1.255A4.315 4.315 0 0 1 4.287 128h5.65a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 18.507 128h5.651a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 32.729 128h5.65a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 46.951 128h5.65a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 61.173 128h5.65a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 75.395 128h5.65a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 89.616 128h5.651a4.29 4.29 0 0 1 4.286-4.285 4.29 4.29 0 0 1 4.285 4.285h5.651a4.29 4.29 0 0 1 4.286-4.285A4.29 4.29 0 0 1 118.06 128h5.654a4.31 4.31 0 0 1 1.256-3.03 4.31 4.31 0 0 1 3.03-1.255v-5.65a4.29 4.29 0 0 1-4.286-4.287 4.29 4.29 0 0 1 4.286-4.284v-5.65a4.29 4.29 0 0 1-4.286-4.287A4.29 4.29 0 0 1 128 95.272v-5.65a4.29 4.29 0 0 1-4.286-4.286A4.29 4.29 0 0 1 128 81.05V75.4a4.29 4.29 0 0 1-4.286-4.287A4.29 4.29 0 0 1 128 66.83v-5.65a4.29 4.29 0 0 1-4.286-4.287A4.29 4.29 0 0 1 128 52.608v-5.65a4.291 4.291 0 0 1-4.286-4.288A4.291 4.291 0 0 1 128 38.383v-5.651a4.29 4.29 0 0 1-4.286-4.286A4.29 4.29 0 0 1 128 24.16v-5.65a4.29 4.29 0 0 1-4.286-4.286A4.29 4.29 0 0 1 128 9.94V4.286a4.315 4.315 0 0 1-3.03-1.254A4.316 4.316 0 0 1 123.714 0h-5.651a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 109.492 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 95.27 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 81.048 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 66.826 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 52.605 0h-5.651a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 38.383 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 24.16 0h-5.65a4.29 4.29 0 0 1-4.286 4.286A4.29 4.29 0 0 1 9.939 0H4.286A4.321 4.321 0 0 1 3.03 3.032 4.32 4.32 0 0 1 0 4.286Z"/><path fill="#fff" d="M109.04 51.217H45.167l3.334-15.596h38.93L91 18.836H35.047l-17.62 83.096h16.906l7.737-36.31h40.549l-35.234 34.88 6.19 10.952c2.857-1.904 7.5-2.143 10.714-2.143 5.716 0 11.31 1.906 17.142 1.906 5.348 0 10.822-.357 19.752-4.643l3.12-14.643c-6.072 2.5-15.057 4.881-22.872 4.881-3.212 0-6.189-.714-9.284-1.19l34.154-33.214z"/></svg></span>
@@ -479,7 +533,7 @@
       </ul>
     </div>
     <div class="stack__group reveal" style="--d:.24s" data-tilt="4">
-      <h3>Assist</h3>
+      <h3 data-i18n="toolkit.assist">Assist</h3>
       <ul class="tools">
         <li class="tool" style="--brand:#DA7756">
           <span class="tool__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#DA7756" stroke="none"><path d="M12 2c.85 4.7 3.45 7.3 8.15 8.15C15.45 10.85 12.85 13.45 12 18.15c-.85-4.7-3.45-7.3-8.15-8.15C8.55 9.3 11.15 6.7 12 2z"/></svg></span>
@@ -492,8 +546,8 @@
 
 <!-- ───────────────────────── CONTACT ───────────────────────── -->
 <footer class="section contact" id="contact">
-  <p class="eyebrow reveal">Contact</p>
-  <h2 class="contact__head reveal" style="--d:.05s">Have something to build?</h2>
+  <p class="eyebrow reveal" data-i18n="contact.eyebrow">Contact</p>
+  <h2 class="contact__head reveal" style="--d:.05s" data-i18n="contact.h2">Have something to build?</h2>
 
   <div class="contact__links">
     <a class="clink reveal reveal--tilt" style="--d:.10s" href="mailto:alvaroaramayochain123@gmail.com">
@@ -506,11 +560,17 @@
       <span class="clink__label">GitHub</span>
       <span class="clink__value">@AlvaroAramayoChain</span>
     </a>
+        <a class="clink reveal reveal--tilt" style="--d:.18s" href="https://desarrollocardon.com/" target="_blank" rel="noopener">
+      <span class="clink__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.5 3.6 5.6 3.6 9s-1.2 6.5-3.6 9c-2.4-2.5-3.6-5.6-3.6-9S9.6 5.5 12 3z"/></svg></span>
+      <span class="clink__label" data-i18n="contact.cardonLabel">Web development</span>
+      <span class="clink__value">Desarrollo Cardón</span>
+    </a>
   </div>
 
   <p class="sig">Alvaro Aramayo Chain · Argentina</p>
 </footer>
 
+<script src="i18n.js" defer></script>
 <script src="app.js" defer></script>
 </body>
 </html>
