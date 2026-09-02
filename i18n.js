@@ -83,7 +83,7 @@
       'case1.c4':     'Contact form',
       'case1.c5':     'Ticketing module ready',
       'case1.live':   'Visit the live site',
-      'case1.note':   'Simplified recreation above, not the live site — scroll or use its nav to browse the page. Runs entirely in your browser with generic sample copy; no real client names, contact details or business data shown anywhere.',
+      'case1.shotAlt':'Screenshot of the Salta Sistemas homepage',
 
       'case2.title':  'mochec — agrochemical product site',
       'case2.what':   'A product catalog and institutional site for an agrochemical company — plant-nutrition formulations, an environmental policy page, and a WhatsApp-first contact flow instead of online checkout.',
@@ -203,7 +203,7 @@
       'case1.c4':     'Formulario de contacto',
       'case1.c5':     'Módulo de tickets preparado',
       'case1.live':   'Ver el sitio publicado',
-      'case1.note':   'Arriba hay una recreación simplificada, no el sitio real: scrolleá o usá su navegación para recorrer la página. Funciona enteramente en tu navegador con contenido de ejemplo genérico; no se muestran nombres de clientes, datos de contacto ni información real del negocio.',
+      'case1.shotAlt':'Captura de pantalla de la página principal de Salta Sistemas',
 
       'case2.title':  'mochec — sitio de productos agroquímicos',
       'case2.what':   'Catálogo de productos y sitio institucional para una empresa de agroquímicos: formulaciones de nutrición vegetal, una página de política medioambiental y un flujo de contacto por WhatsApp en lugar de compra online.',
