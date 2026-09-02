@@ -544,7 +544,7 @@ a{ color:inherit; }
   font-family:var(--mono); font-size:.68rem; letter-spacing:.1em;
   color:var(--muted);
 }
-.case__shotlink{ display:block; overflow:hidden; }
+.case__shotlink, .case__shotbox{ display:block; overflow:hidden; }
 .case__shot{
   width:100%; aspect-ratio:4/3; object-fit:cover; object-position:top;
   display:block;
