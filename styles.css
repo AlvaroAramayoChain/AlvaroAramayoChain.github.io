@@ -912,6 +912,10 @@ a{ color:inherit; }
 .tool:nth-child(2) .tool__icon{ --fi:1; }
 .tool:nth-child(3) .tool__icon{ --fi:2; }
 .tool:nth-child(4) .tool__icon{ --fi:3; }
+.tool:nth-child(5) .tool__icon{ --fi:0; }
+.tool:nth-child(6) .tool__icon{ --fi:1; }
+.tool:nth-child(7) .tool__icon{ --fi:2; }
+.tool:nth-child(8) .tool__icon{ --fi:3; }
 .tool:hover .tool__icon{
   transform:scale(1.08);
   box-shadow:

@@ -137,6 +137,9 @@
       'toolkit.ship':    'Ship',
       'toolkit.assist':  'Assist',
       'toolkit.hosting': 'Hosting management',
+      'toolkit.apirest': 'API REST',
+      'toolkit.vps':     'VPS management',
+      'toolkit.domain':  'Domain management',
 
       'contact.eyebrow':    'Contact',
       'contact.h2':         'Have something to build?',
@@ -257,6 +260,9 @@
       'toolkit.ship':    'Publicar',
       'toolkit.assist':  'Asistir',
       'toolkit.hosting': 'Gestión de hosting',
+      'toolkit.apirest': 'API REST',
+      'toolkit.vps':     'Gestión de VPS',
+      'toolkit.domain':  'Gestión de dominio',
 
       'contact.eyebrow':    'Contacto',
       'contact.h2':         '¿Tenés algo para construir?',
