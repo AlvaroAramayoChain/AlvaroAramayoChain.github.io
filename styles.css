@@ -551,6 +551,7 @@ a{ color:inherit; }
   transition:transform .5s var(--ease);
 }
 .case__shotlink:hover .case__shot{ transform:scale(1.03); }
+.case__shot--app{ aspect-ratio:520/620; max-height:32rem; object-fit:contain; background:#0b0e1c; }
 
 .case__title{
   font-family:var(--display); font-weight:500;
