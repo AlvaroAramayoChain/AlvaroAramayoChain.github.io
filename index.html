@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Alvaro Aramayo Chain — Full Stack Developer</title>
-<meta name="description" content="Alvaro Aramayo Chain is a full stack developer based in Argentina, building websites and web applications with WhatsApp and email integrations.">
+<meta name="description" content="Full stack developer based in Argentina. Websites and web applications with WhatsApp and email integrations, built end to end.">
 <meta name="author" content="Alvaro Aramayo Chain">
 <meta name="theme-color" content="#F4F2EE">
 <link rel="canonical" href="https://alvaroaramayochain.github.io/">
+<link rel="alternate" hreflang="en" href="https://alvaroaramayochain.github.io/?lang=en">
+<link rel="alternate" hreflang="es" href="https://alvaroaramayochain.github.io/?lang=es">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://alvaroaramayochain.github.io/">
@@ -16,417 +18,329 @@
 <meta property="og:image" content="https://alvaroaramayochain.github.io/assets/alvaro.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Cpath d='M7 25 13.4 7h5.2L25 25h-4.6l-1.3-4h-6.2l-1.3 4zm7-7.6h4l-2-6.3z' fill='%23FFFFFF'/%3E%3Ccircle cx='26' cy='6' r='3' fill='%23E10600'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Cpath d='M7 25 13.4 7h5.2L25 25h-4.6l-1.3-4h-6.2l-1.3 4zm7-7.6h4l-2-6.3z' fill='%23FFFFFF'/%3E%3Ccircle cx='26' cy='6' r='3' fill='%23DC0500'/%3E%3C/svg%3E">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Martian+Mono:wdth,wght@87.5,400;87.5,500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Martian+Mono:wdth,wght@87.5,400;87.5,500&display=swap">
-
+<link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
-
-<!-- Enables the motion layer only when JS runs and motion is welcome.
-     Without it every element renders in its final, readable state. -->
-<script>
-  (function () {
-    var d = document.documentElement;
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('js-motion');
-    d.classList.add('js');
-  })();
-</script>
 </head>
 <body>
+<script>
+  /* motion flag before first paint, so headlines never flash in and out */
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) document.documentElement.classList.add('js-motion');
+</script>
 
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-<!-- ───────────── PRELOADER ───────────── -->
-<div class="loader" aria-hidden="true">
-  <div class="loader__top">
-    <span>Alvaro Aramayo Chain</span>
-    <span>Portfolio 2026</span>
-  </div>
-  <div class="loader__count"><span class="loader__num">000</span></div>
-  <div class="loader__bar"><span></span></div>
-</div>
-
-<!-- Black layer that fades in behind the dark sections -->
+<!-- Fades in behind the dark (contact) section -->
 <div class="ink-layer" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
 
-<!-- Custom cursor (pointer devices only) -->
-<div class="cursor" aria-hidden="true"><span class="cursor__label">View</span></div>
+<!-- ───────────── HEADER ───────────── -->
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="#top">AAC<span class="logo__dot" aria-hidden="true"></span><span class="sr-only" data-i18n="nav.home">Alvaro Aramayo Chain, back to top</span></a>
 
-<!-- ───────────── NAV ───────────── -->
-<header class="nav">
-  <a class="nav__mark" href="#top" aria-label="Alvaro Aramayo Chain, back to top">AAC<span class="nav__dot"></span></a>
+    <nav class="nav" aria-label="Sections" data-i18n-aria="nav.sections">
+      <a class="link" href="#about" data-i18n="nav.about">About</a>
+      <a class="link" href="#work" data-i18n="nav.work">Work</a>
+      <a class="link" href="#stack" data-i18n="nav.stack">Stack</a>
+      <a class="link" href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
 
-  <nav class="nav__links" aria-label="Sections">
-    <a class="ulink" href="#about"><span class="nav__idx">01</span>About</a>
-    <a class="ulink" href="#work"><span class="nav__idx">02</span>Work</a>
-    <a class="ulink" href="#stack"><span class="nav__idx">03</span>Stack</a>
-    <a class="ulink" href="#contact"><span class="nav__idx">04</span>Contact</a>
-  </nav>
+    <div class="lang" role="group" aria-label="Language" data-i18n-aria="nav.language">
+      <button type="button" class="lang__btn" data-lang="es" aria-pressed="false" lang="es"><span aria-hidden="true">ES</span><span class="sr-only">Español</span></button>
+      <span class="lang__sep" aria-hidden="true">/</span>
+      <button type="button" class="lang__btn" data-lang="en" aria-pressed="true" lang="en"><span aria-hidden="true">EN</span><span class="sr-only">English</span></button>
+    </div>
 
-  <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu">
-    <span class="nav__menu-open">Menu</span><span class="nav__menu-close">Close</span>
-  </button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-btn__open" data-i18n="nav.menu">Menu</span>
+      <span class="menu-btn__close" data-i18n="nav.close">Close</span>
+    </button>
+  </div>
 </header>
 
 <!-- Fullscreen mobile menu -->
-<div class="menu" id="menu" hidden>
-  <nav class="menu__links" aria-label="Sections">
-    <a href="#about"><span class="menu__idx">01</span><span class="menu__word">About</span></a>
-    <a href="#work"><span class="menu__idx">02</span><span class="menu__word">Work</span></a>
-    <a href="#stack"><span class="menu__idx">03</span><span class="menu__word">Stack</span></a>
-    <a href="#contact"><span class="menu__idx">04</span><span class="menu__word">Contact</span></a>
+<div class="menu" id="menu">
+  <nav class="wrap menu__nav" aria-label="Sections" data-i18n-aria="nav.sections">
+    <a href="#about"><span class="menu__num">01</span><span data-i18n="nav.about">About</span></a>
+    <a href="#work"><span class="menu__num">02</span><span data-i18n="nav.work">Work</span></a>
+    <a href="#stack"><span class="menu__num">03</span><span data-i18n="nav.stack">Stack</span></a>
+    <a href="#contact"><span class="menu__num">04</span><span data-i18n="nav.contact">Contact</span></a>
   </nav>
-  <div class="menu__foot">
-    <a href="mailto:contacto@desarrollocardon.com">contacto@desarrollocardon.com</a>
-    <span>Based in Argentina</span>
+  <div class="wrap menu__foot">
+    <div class="lang" role="group" aria-label="Language" data-i18n-aria="nav.language">
+      <button type="button" class="lang__btn" data-lang="es" aria-pressed="false" lang="es"><span aria-hidden="true">ES</span><span class="sr-only">Español</span></button>
+      <span class="lang__sep" aria-hidden="true">/</span>
+      <button type="button" class="lang__btn" data-lang="en" aria-pressed="true" lang="en"><span aria-hidden="true">EN</span><span class="sr-only">English</span></button>
+    </div>
+    <a class="link" href="mailto:contacto@desarrollocardon.com">contacto@desarrollocardon.com</a>
   </div>
 </div>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
 <!-- ───────────── HERO ───────────── -->
-<section class="hero" id="top" data-theme="paper">
-  <div class="hero__meta">
-    <p class="hero__role">Full Stack Developer</p>
-    <p class="hero__loc">Based in Argentina</p>
-    <p class="hero__time"><span class="live-dot" aria-hidden="true"></span><time class="clock" datetime="">--:--:--</time> <span class="hero__tz">Salta, GMT−3</span></p>
-  </div>
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero__meta label">
+      <span data-i18n="hero.role">Full Stack Developer</span>
+      <span data-i18n="hero.loc">Based in Argentina</span>
+      <span class="hero__time"><span class="dot" aria-hidden="true"></span><time class="clock">--:--</time> <span data-i18n="hero.tz">Salta, GMT−3</span></span>
+    </div>
 
-  <h1 class="hero__name" aria-label="Alvaro Aramayo Chain">
-    <span class="hero__line" aria-hidden="true"><span class="hero__word" data-depth="1">Alvaro</span></span>
-    <span class="hero__line hero__line--in" aria-hidden="true"><span class="hero__word" data-depth="-1.6">Aramayo</span></span>
-    <span class="hero__line" aria-hidden="true"><span class="hero__word" data-depth=".6">Chain<span class="hero__stop">.</span></span></span>
-  </h1>
+    <h1 class="hero__title reveal"><span>Alvaro Aramayo Chain<span class="red">.</span></span></h1>
 
-  <div class="hero__foot">
-    <p class="hero__lede">I build institutional websites, functional sites and web applications. Designed, built and shipped end to end — from the first line of backend code to the interface a client actually uses.</p>
-    <p class="hero__scroll" aria-hidden="true"><span class="hero__scroll-line"></span>Scroll</p>
-    <a class="hero__cta magnetic" href="#work"><span class="magnetic__inner">See the work</span></a>
+    <p class="hero__lede" data-i18n="hero.lede">I build institutional websites, functional sites and web applications — designed, built and shipped end to end, from the first line of backend code to the interface a client actually uses.</p>
+
+    <div class="hero__actions">
+      <a class="btn btn--solid" href="#work" data-i18n="hero.cta1">See the work</a>
+      <a class="btn" href="#contact" data-i18n="hero.cta2">Get in touch</a>
+    </div>
   </div>
 </section>
 
 <!-- ───────────── ABOUT ───────────── -->
-<section class="about section" id="about" data-theme="paper">
-  <header class="sec-head">
-    <span class="sec-head__idx">01 / 04</span>
-    <h2 class="sec-head__title">About</h2>
-  </header>
-
-  <p class="about__big split-lines">Most of my work sits where a website stops being a brochure and starts <em>doing a job</em> — taking a booking, sending the confirmation, remembering to follow up. I care about the boring parts: clean data, sane backend structure, nothing that falls over on a <em>busy Saturday</em>.</p>
-
-  <div class="about__grid">
-    <figure class="portrait">
-      <div class="portrait__mask"><img src="assets/alvaro.jpg" alt="Portrait of Alvaro Aramayo Chain" width="880" height="1100" loading="lazy" decoding="async"></div>
-      <figcaption>Alvaro Aramayo Chain, Argentina</figcaption>
-    </figure>
-
-    <div class="about__text">
-      <p>I usually work the whole flow solo: scope it out with whoever's asking, build the backend and the interface, wire up WhatsApp and email so nothing gets forgotten, and stay close after launch to fix what actually breaks — not just what looks broken. Studying cybersecurity alongside that pushes me to default to systems that are hardened from the start, instead of patched after something goes wrong.</p>
-
-      <dl class="facts">
-        <div><dt>Focus</dt><dd>Websites and web applications</dd></div>
-        <div><dt>Integrations</dt><dd>WhatsApp and email</dd></div>
-        <div><dt>Practice</dt><dd>Backend best practices</dd></div>
-        <div><dt>Studying</dt><dd>Cybersecurity</dd></div>
-        <div><dt>Based in</dt><dd>Argentina, works remotely</dd></div>
-      </dl>
-    </div>
-  </div>
-
-  <ul class="principles">
-    <li>
-      <h3>End to end</h3>
-      <p>One person across backend, interface and integrations — fewer handoffs, fewer things lost in translation.</p>
-    </li>
-    <li>
-      <h3>Automation-minded</h3>
-      <p>If a step repeats — a reminder, a confirmation, a follow-up — it belongs in the system, not on someone's to-do list.</p>
-    </li>
-    <li>
-      <h3>Security-aware</h3>
-      <p>Cybersecurity study feeds back into the day job: data handled carefully by default, not as an afterthought.</p>
-    </li>
-  </ul>
-</section>
-
-<!-- ───────────── WORK ───────────── -->
-<section class="work" id="work" data-theme="ink">
-  <div class="work__pin">
-    <header class="sec-head sec-head--work">
-      <span class="sec-head__idx">02 / 04</span>
-      <h2 class="sec-head__title">Selected work</h2>
-      <p class="work__hint" aria-hidden="true">Seven projects, built end to end <span class="work__progress"><span></span></span></p>
+<section class="section" id="about">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="label"><span class="label__num">01</span> — <span data-i18n="nav.about">About</span></p>
+      <h2 class="sec-title reveal"><span data-i18n="about.title">I make web products that hold up once real customers start using them.</span></h2>
     </header>
 
-    <ol class="work__track">
+    <div class="about">
+      <figure class="about__photo">
+        <img src="assets/img/alvaro-480.webp" srcset="assets/img/alvaro-480.webp 480w, assets/img/alvaro-880.webp 880w" sizes="320px" width="880" height="1100" loading="lazy" decoding="async" alt="Portrait of Alvaro Aramayo Chain" data-i18n-alt="about.photoAlt">
+      </figure>
 
-      <!-- 01 — Booking SaaS -->
-      <li class="proj">
-        <div class="proj__top">
-          <span class="proj__num">01</span>
-          <span class="proj__year">2026</span>
-        </div>
-        <div class="proj__preview proj__preview--mock">
-          <div class="mock-book" role="group" aria-label="Booking demo: pick a free slot">
-            <div class="mock-book__head"><span>Demo Studio</span><span>Free slots, today</span></div>
-            <div class="mock-book__slots">
-              <button type="button" data-time="9:00">9:00</button>
-              <button type="button" data-time="10:30">10:30</button>
-              <button type="button" disabled>11:00</button>
-              <button type="button" data-time="12:00">12:00</button>
-              <button type="button" disabled>13:30</button>
-              <button type="button" data-time="15:00">15:00</button>
-              <button type="button" data-time="16:30">16:30</button>
-              <button type="button" disabled>17:00</button>
-            </div>
-            <p class="mock-book__msg" aria-live="polite">Pick a free slot to see the booking flow</p>
-          </div>
-        </div>
-        <h3 class="proj__title">Booking &amp; appointments platform</h3>
-        <p class="proj__what">A scheduling SaaS for local businesses — salons, clinics, studios. Customers pick a free slot from the public page; the business gets a clean agenda instead of a full inbox.</p>
-        <dl class="proj__spec">
-          <div><dt>Type</dt><dd>Multi-tenant web app</dd></div>
-          <div><dt>Stack</dt><dd>Online booking page, WhatsApp reminders, email confirmations, per-business accounts, admin agenda</dd></div>
-          <div><dt>Status</dt><dd>In development</dd></div>
+      <div class="about__text">
+        <p class="about__intro" data-i18n="about.p1">Most of my work sits where a website stops being a brochure and starts doing a job — taking a booking, sending the confirmation, remembering to follow up. I care about the boring parts: clean data, sane backend structure, nothing that falls over on a busy Saturday.</p>
+        <p data-i18n="about.p2">I usually work the whole flow solo: scope it out with whoever's asking, build the backend and the interface, wire up WhatsApp and email so nothing gets forgotten, and stay close after launch to fix what actually breaks. Studying cybersecurity alongside that pushes me to default to systems that are hardened from the start.</p>
+
+        <dl class="facts">
+          <div><dt class="label" data-i18n="about.f1k">Focus</dt><dd data-i18n="about.f1v">Websites and web applications</dd></div>
+          <div><dt class="label" data-i18n="about.f2k">Integrations</dt><dd data-i18n="about.f2v">WhatsApp and email</dd></div>
+          <div><dt class="label" data-i18n="about.f3k">Practice</dt><dd data-i18n="about.f3v">Backend best practices</dd></div>
+          <div><dt class="label" data-i18n="about.f4k">Studying</dt><dd data-i18n="about.f4v">Cybersecurity</dd></div>
+          <div><dt class="label" data-i18n="about.f5k">Based in</dt><dd data-i18n="about.f5v">Argentina, works remotely</dd></div>
         </dl>
-        <p class="proj__note">The slots above are a live mock that runs in your browser on made-up times. No real customers or bookings are shown.</p>
-      </li>
+      </div>
+    </div>
 
-      <!-- 02 — Salta Sistemas -->
-      <li class="proj" data-cursor="view" data-href="https://saltasistemas.com.ar/">
-        <div class="proj__top">
-          <span class="proj__num">02</span>
-          <span class="proj__year">2026</span>
-        </div>
-        <a class="proj__preview" href="https://saltasistemas.com.ar/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fsaltasistemas.com.ar%2F?w=1200&amp;h=900" alt="" width="1200" height="900" loading="lazy" decoding="async">
-        </a>
-        <h3 class="proj__title">Salta Sistemas — corporate website</h3>
-        <p class="proj__what">The institutional website for an IT services company in Salta, Argentina — service catalog, completed-work portfolio and a contact form, backed by a content-managed admin panel instead of hard-coded pages.</p>
-        <dl class="proj__spec">
-          <div><dt>Role</dt><dd>Full-stack development</dd></div>
-          <div><dt>Stack</dt><dd>Python &amp; Django, content-managed admin, SEO &amp; sitemap, contact form, ticketing module ready</dd></div>
-          <div><dt>Status</dt><dd>Completed</dd></div>
-        </dl>
-        <a class="proj__link ulink" href="https://saltasistemas.com.ar" target="_blank" rel="noopener">Visit saltasistemas.com.ar<span class="sr-only"> (opens in a new tab)</span></a>
+    <ul class="principles">
+      <li>
+        <h3 data-i18n="about.h1t">End to end</h3>
+        <p data-i18n="about.h1d">One person across backend, interface and integrations — fewer handoffs, fewer things lost in translation.</p>
       </li>
-
-      <!-- 03 — Condor Seguridad -->
-      <li class="proj" data-cursor="view" data-href="https://condorseguridad.com.ar/">
-        <div class="proj__top">
-          <span class="proj__num">03</span>
-          <span class="proj__year">2026</span>
-        </div>
-        <a class="proj__preview" href="https://condorseguridad.com.ar/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcondorseguridad.com.ar%2F?w=1200&amp;h=900" alt="" width="1200" height="900" loading="lazy" decoding="async">
-        </a>
-        <h3 class="proj__title">Condor Seguridad — private security company website</h3>
-        <p class="proj__what">The corporate website for Condor Seguridad S.A.S., a private security firm based in the Puna region of Salta, Argentina — presenting its services (surveillance, armed escort, cargo and asset protection) and putting the company in front of the mining operations it works with.</p>
-        <dl class="proj__spec">
-          <div><dt>Role</dt><dd>Full-stack development</dd></div>
-          <div><dt>Stack</dt><dd>Institutional website, service catalog, contact form, mobile-first</dd></div>
-          <div><dt>Status</dt><dd>Completed</dd></div>
-        </dl>
-        <a class="proj__link ulink" href="https://condorseguridad.com.ar/" target="_blank" rel="noopener">Visit condorseguridad.com.ar<span class="sr-only"> (opens in a new tab)</span></a>
+      <li>
+        <h3 data-i18n="about.h2t">Automation-minded</h3>
+        <p data-i18n="about.h2d">If a step repeats — a reminder, a confirmation, a follow-up — it belongs in the system, not on someone's to-do list.</p>
       </li>
-
-      <!-- 04 — mochec -->
-      <li class="proj">
-        <div class="proj__top">
-          <span class="proj__num">04</span>
-          <span class="proj__year">2026</span>
-        </div>
-        <div class="proj__preview proj__preview--mock" aria-hidden="true">
-          <div class="mock-site">
-            <div class="mock-site__nav"><b>mochec</b><span>Productos</span><span>Nosotros</span><span>Contacto</span></div>
-            <p class="mock-site__kicker">Cultivos sanos, en su máximo rendimiento</p>
-            <p class="mock-site__h">Expertos en prevención del estrés vegetal</p>
-            <div class="mock-site__cards"><span>Maxiren TS</span><span>Maxiren K</span><span>Maxiren NPK</span></div>
-            <span class="mock-site__wa">WhatsApp</span>
-          </div>
-        </div>
-        <h3 class="proj__title">mochec — agrochemical product site</h3>
-        <p class="proj__what">A product catalog and institutional site for an agrochemical company — plant-nutrition formulations, an environmental policy page, and a WhatsApp-first contact flow instead of online checkout.</p>
-        <dl class="proj__spec">
-          <div><dt>Role</dt><dd>Full-stack development</dd></div>
-          <div><dt>Stack</dt><dd>Python &amp; Flask, JSON-driven catalog, WhatsApp contact, environmental policy page</dd></div>
-          <div><dt>Status</dt><dd>In development</dd></div>
-        </dl>
-        <p class="proj__note">Simplified recreation above, not the live site. No real client contact details or business data are shown.</p>
+      <li>
+        <h3 data-i18n="about.h3t">Security-aware</h3>
+        <p data-i18n="about.h3d">Cybersecurity study feeds back into the day job: data handled carefully by default, not as an afterthought.</p>
       </li>
-
-      <!-- 05 — Coming soon template -->
-      <li class="proj">
-        <div class="proj__top">
-          <span class="proj__num">05</span>
-          <span class="proj__year">2026</span>
-        </div>
-        <div class="proj__preview proj__preview--mock" aria-hidden="true">
-          <div class="mock-soon">
-            <span class="mock-soon__badge"><span class="live-dot"></span>Page in development</span>
-            <p class="mock-soon__h">Something new is coming.</p>
-            <p class="mock-soon__p">Our new site is on its way — in the meantime, reach out and we'll get back to you.</p>
-            <span class="mock-soon__field">you@email.com<b>Notify me</b></span>
-          </div>
-        </div>
-        <h3 class="proj__title">"Coming soon" placeholder page</h3>
-        <p class="proj__what">A simple single-page site for a business whose real website isn't ready yet — a clear message and a way to get in touch, live in minutes instead of waiting on the full build.</p>
-        <dl class="proj__spec">
-          <div><dt>Role</dt><dd>Design &amp; development</dd></div>
-          <div><dt>Stack</dt><dd>Single-page site, custom branding, email capture, mobile-first</dd></div>
-          <div><dt>Status</dt><dd>Reusable template</dd></div>
-        </dl>
-        <p class="proj__note">Demo only — the form doesn't send anywhere. Swap the name, colors and message and it's ready to go live while the full site gets built.</p>
-      </li>
-
-      <!-- 06 — Agrofuturo -->
-      <li class="proj">
-        <div class="proj__top">
-          <span class="proj__num">06</span>
-          <span class="proj__year">2026</span>
-        </div>
-        <div class="proj__preview">
-          <img src="https://s.wordpress.com/mshots/v1/http%3A%2F%2Fagrofuturo.com.ar%2F?w=1200&amp;h=900" alt="Screenshot of the Agrofuturo S.R.L. under-construction landing page" width="1200" height="900" loading="lazy" decoding="async">
-        </div>
-        <h3 class="proj__title">Agrofuturo — "under construction" landing page</h3>
-        <p class="proj__what">A holding page for Agrofuturo S.R.L., an agrochemicals and farm-supply company, while its full site is being built — brand-first design and a clear message that something is on the way.</p>
-        <dl class="proj__spec">
-          <div><dt>Role</dt><dd>Design &amp; development</dd></div>
-          <div><dt>Stack</dt><dd>Holding page, custom branding, mobile-first, fast to deploy</dd></div>
-          <div><dt>Status</dt><dd>In development</dd></div>
-        </dl>
-        <p class="proj__note">Not linked yet — the full site for this client is still in development.</p>
-      </li>
-
-      <!-- 07 — Secure Password Generator -->
-      <li class="proj" data-cursor="view" data-href="https://github.com/AlvaroAramayoChain/SecurePasswordGenerator">
-        <div class="proj__top">
-          <span class="proj__num">07</span>
-          <span class="proj__year">2026</span>
-        </div>
-        <a class="proj__preview proj__preview--app" href="https://github.com/AlvaroAramayoChain/SecurePasswordGenerator" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-          <img src="https://raw.githubusercontent.com/AlvaroAramayoChain/SecurePasswordGenerator/main/docs/demo-en.gif" alt="" width="520" height="620" loading="lazy" decoding="async">
-        </a>
-        <h3 class="proj__title">Secure Password Generator — desktop app</h3>
-        <p class="proj__what">A fast desktop app that generates strong random passwords from a retro padlock-shaped window, in Spanish or English — downloadable for Windows, macOS and Linux, with no install needed beyond extracting the archive.</p>
-        <dl class="proj__spec">
-          <div><dt>Role</dt><dd>Design &amp; development</dd></div>
-          <div><dt>Stack</dt><dd>Python, cross-platform builds, automated tests &amp; CI, open source (MIT)</dd></div>
-          <div><dt>Status</dt><dd>Completed</dd></div>
-        </dl>
-        <a class="proj__link ulink" href="https://github.com/AlvaroAramayoChain/SecurePasswordGenerator" target="_blank" rel="noopener">View on GitHub<span class="sr-only"> (opens in a new tab)</span></a>
-      </li>
-
-    </ol>
+    </ul>
   </div>
 </section>
 
-<!-- ───────────── STACK ───────────── -->
-<section class="stack section" id="stack" data-theme="paper">
-  <header class="sec-head">
-    <span class="sec-head__idx">03 / 04</span>
-    <h2 class="sec-head__title">Stack</h2>
-  </header>
+<!-- ───────────── WORK ─────────────
+     To add a project: copy one <article class="card">, change the number,
+     image and links, and add its pN.* keys to both languages in i18n.js. -->
+<section class="section" id="work">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="label"><span class="label__num">02</span> — <span data-i18n="nav.work">Work</span></p>
+      <h2 class="sec-title reveal"><span data-i18n="work.title">Real products, built end to end.</span></h2>
+    </header>
 
-  <div class="marquee" aria-hidden="true" data-speed="1">
-    <div class="marquee__track">
-      <span class="marquee__item">Python<i></i>SQL<i></i>HTML<i></i>CSS<i></i>JavaScript<i></i>Claude Code<i></i>Linux<i></i>VirtualBox<i></i>Hosting<i></i>FileZilla<i></i>Git<i></i>GitHub<i></i>APIs<i></i></span>
+    <div class="cards">
+
+      <article class="card">
+        <a class="card__media" href="https://saltasistemas.com.ar/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/salta-640.webp" srcset="assets/img/salta-640.webp 640w, assets/img/salta-960.webp 960w, assets/img/salta-1200.webp 1200w" sizes="(min-width: 1248px) 576px, (min-width: 768px) 46vw, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="">
+        </a>
+        <p class="card__meta label"><span>01 — 2026</span><span data-i18n="status.done">Completed</span></p>
+        <h3 class="card__title" data-i18n="p1.title">Salta Sistemas — corporate website</h3>
+        <p class="card__desc" data-i18n="p1.desc">Institutional site for an IT services company in Salta: service catalog, past work and a contact form, all managed from an admin panel.</p>
+        <p class="card__stack">Python · Django · HTML · CSS</p>
+        <p class="card__links">
+          <a class="link" href="https://saltasistemas.com.ar/" target="_blank" rel="noopener"><span data-i18n="link.live">Live site</span> <span aria-hidden="true">↗</span><span class="sr-only" data-i18n="a11y.newtab">(opens in a new tab)</span></a>
+        </p>
+      </article>
+
+      <article class="card">
+        <a class="card__media" href="https://condorseguridad.com.ar/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/condor-640.webp" srcset="assets/img/condor-640.webp 640w, assets/img/condor-960.webp 960w, assets/img/condor-1200.webp 1200w" sizes="(min-width: 1248px) 576px, (min-width: 768px) 46vw, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="">
+        </a>
+        <p class="card__meta label"><span>02 — 2026</span><span data-i18n="status.done">Completed</span></p>
+        <h3 class="card__title" data-i18n="p2.title">Condor Seguridad — security company website</h3>
+        <p class="card__desc" data-i18n="p2.desc">Corporate site for a private security firm in the Puna region of Salta, presenting its services to the mining operations it works with.</p>
+        <p class="card__stack">HTML · CSS · JavaScript</p>
+        <p class="card__links">
+          <a class="link" href="https://condorseguridad.com.ar/" target="_blank" rel="noopener"><span data-i18n="link.live">Live site</span> <span aria-hidden="true">↗</span><span class="sr-only" data-i18n="a11y.newtab">(opens in a new tab)</span></a>
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__media card__media--blank" aria-hidden="true"><span data-i18n="p3.short">Booking platform</span></div>
+        <p class="card__meta label"><span>03 — 2026</span><span data-i18n="status.dev">In development</span></p>
+        <h3 class="card__title" data-i18n="p3.title">Booking &amp; appointments platform</h3>
+        <p class="card__desc" data-i18n="p3.desc">Scheduling SaaS for salons, clinics and studios: customers book a free slot online and the business gets a clean agenda.</p>
+        <p class="card__stack" data-i18n="p3.stack">Multi-tenant web app · WhatsApp reminders · Email confirmations</p>
+        <p class="card__links"></p>
+      </article>
+
+      <article class="card">
+        <a class="card__media" href="https://github.com/AlvaroAramayoChain/SecurePasswordGenerator" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/password-generator-640.webp" srcset="assets/img/password-generator-640.webp 640w, assets/img/password-generator-960.webp 960w, assets/img/password-generator-1200.webp 1200w" sizes="(min-width: 1248px) 576px, (min-width: 768px) 46vw, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="">
+        </a>
+        <p class="card__meta label"><span>04 — 2026</span><span data-i18n="status.done">Completed</span></p>
+        <h3 class="card__title" data-i18n="p4.title">Secure Password Generator — desktop app</h3>
+        <p class="card__desc" data-i18n="p4.desc">Generates strong random passwords from a retro padlock-shaped window, in Spanish or English, for Windows, macOS and Linux.</p>
+        <p class="card__stack" data-i18n="p4.stack">Python · Cross-platform builds · Tests &amp; CI · MIT</p>
+        <p class="card__links">
+          <a class="link" href="https://github.com/AlvaroAramayoChain/SecurePasswordGenerator" target="_blank" rel="noopener"><span data-i18n="link.code">Code</span> <span aria-hidden="true">↗</span><span class="sr-only" data-i18n="a11y.newtab">(opens in a new tab)</span></a>
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__media card__media--blank" aria-hidden="true"><span>mochec</span></div>
+        <p class="card__meta label"><span>05 — 2026</span><span data-i18n="status.dev">In development</span></p>
+        <h3 class="card__title" data-i18n="p5.title">mochec — agrochemical product site</h3>
+        <p class="card__desc" data-i18n="p5.desc">Product catalog for an agrochemical company, with a WhatsApp-first contact flow instead of online checkout.</p>
+        <p class="card__stack" data-i18n="p5.stack">Python · Flask · JSON catalog · WhatsApp</p>
+        <p class="card__links"></p>
+      </article>
+
+      <article class="card">
+        <div class="card__media">
+          <img src="assets/img/agro-640.webp" srcset="assets/img/agro-640.webp 640w, assets/img/agro-960.webp 960w, assets/img/agro-1200.webp 1200w" sizes="(min-width: 1248px) 576px, (min-width: 768px) 46vw, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="Agrofuturo S.R.L. under-construction page" data-i18n-alt="p6.alt">
+        </div>
+        <p class="card__meta label"><span>06 — 2026</span><span data-i18n="status.dev">In development</span></p>
+        <h3 class="card__title" data-i18n="p6.title">Agrofuturo — "under construction" page</h3>
+        <p class="card__desc" data-i18n="p6.desc">Brand-first holding page for an agrochemicals and farm-supply company while its full site is being built.</p>
+        <p class="card__stack" data-i18n="p6.stack">HTML · CSS · Custom branding</p>
+        <p class="card__links"></p>
+      </article>
+
+      <article class="card">
+        <div class="card__media card__media--blank" aria-hidden="true"><span data-i18n="p7.short">Coming soon</span></div>
+        <p class="card__meta label"><span>07 — 2026</span><span data-i18n="status.template">Reusable template</span></p>
+        <h3 class="card__title" data-i18n="p7.title">"Coming soon" placeholder page</h3>
+        <p class="card__desc" data-i18n="p7.desc">A one-page site a business can put live in minutes while its real website gets built.</p>
+        <p class="card__stack" data-i18n="p7.stack">HTML · CSS · Email capture</p>
+        <p class="card__links"></p>
+      </article>
+
     </div>
   </div>
+</section>
 
-  <p class="stack__intro">What I work with, grouped by what it's for.</p>
+<!-- ───────────── STACK ─────────────
+     To add a technology: add a <symbol id="..."> to assets/icons.svg and
+     copy one <li class="tech"> pointing at it. -->
+<section class="section" id="stack">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="label"><span class="label__num">03</span> — <span data-i18n="nav.stack">Stack</span></p>
+      <h2 class="sec-title reveal"><span data-i18n="stack.title">What I work with, grouped by what it's for.</span></h2>
+    </header>
 
-  <div class="stack__grid">
-    <div class="stack__group">
-      <h3>Write</h3>
-      <ul>
-        <li>Python</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Django</li><li>Flask</li><li>APIs / REST</li><li>Visual Studio Code</li>
+    <div class="techs">
+      <h3 class="label techs__cat" data-i18n="stack.lang">Languages</h3>
+      <ul class="techs__grid">
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#python"/></svg><span>Python</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#javascript"/></svg><span>JavaScript</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#html"/></svg><span>HTML</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#css"/></svg><span>CSS</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#sql"/></svg><span>SQL</span></li>
       </ul>
-    </div>
-    <div class="stack__group">
-      <h3>Store</h3>
-      <ul>
-        <li>SQL</li><li>PostgreSQL</li><li>SQLite3</li>
+
+      <h3 class="label techs__cat" data-i18n="stack.data">Frameworks &amp; data</h3>
+      <ul class="techs__grid">
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#django"/></svg><span>Django</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#flask"/></svg><span>Flask</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#postgresql"/></svg><span>PostgreSQL</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#sqlite"/></svg><span>SQLite</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#apis"/></svg><span data-i18n="stack.apis">APIs</span></li>
       </ul>
-    </div>
-    <div class="stack__group">
-      <h3>Run</h3>
-      <ul>
-        <li>Linux</li><li>VirtualBox</li><li>VPS management</li><li>Putty</li>
+
+      <h3 class="label techs__cat" data-i18n="stack.tools">Tools</h3>
+      <ul class="techs__grid">
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#git"/></svg><span>Git</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#github"/></svg><span>GitHub</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#vscode"/></svg><span>VS Code</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#filezilla"/></svg><span>FileZilla</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#putty"/></svg><span>PuTTY</span></li>
       </ul>
-    </div>
-    <div class="stack__group">
-      <h3>Ship</h3>
-      <ul>
-        <li>Hosting</li><li>FileZilla / FTP</li><li>Git</li><li>GitHub</li><li>Domain management</li><li>SSL</li>
+
+      <h3 class="label techs__cat" data-i18n="stack.infra">Infrastructure</h3>
+      <ul class="techs__grid">
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#linux"/></svg><span>Linux</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#virtualbox"/></svg><span>VirtualBox</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#hosting"/></svg><span data-i18n="stack.hosting">Hosting</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#vps"/></svg><span data-i18n="stack.vps">VPS</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#domains"/></svg><span data-i18n="stack.domains">Domains</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#ssl"/></svg><span>SSL</span></li>
       </ul>
-    </div>
-    <div class="stack__group">
-      <h3>Assist</h3>
-      <ul>
-        <li>Claude</li><li>Claude Code</li>
+
+      <h3 class="label techs__cat" data-i18n="stack.ai">AI</h3>
+      <ul class="techs__grid">
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#claude"/></svg><span>Claude</span></li>
+        <li class="tech"><svg aria-hidden="true"><use href="assets/icons.svg#claude-code"/></svg><span>Claude Code</span></li>
       </ul>
     </div>
   </div>
 </section>
 
 <!-- ───────────── CONTACT ───────────── -->
-<section class="contact" id="contact" data-theme="ink">
-  <header class="sec-head">
-    <span class="sec-head__idx">04 / 04</span>
-    <h2 class="sec-head__title">Contact</h2>
-  </header>
+<section class="section section--ink" id="contact">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="label"><span class="label__num">04</span> — <span data-i18n="nav.contact">Contact</span></p>
+      <h2 class="sec-title reveal"><span data-i18n="contact.title">Let's work together.</span></h2>
+      <p class="sec-lede" data-i18n="contact.lede">Have something to build? Tell me about it.</p>
+    </header>
 
-  <a class="contact__big" href="mailto:contacto@desarrollocardon.com" data-cursor="mail" data-cursor-label="Write">
-    <span class="contact__line"><span>Let's work</span></span>
-    <span class="contact__line contact__line--in"><span>together<span class="contact__stop">.</span></span></span>
-  </a>
-
-  <div class="contact__rows">
-    <div class="contact__row">
-      <span class="contact__label">Email</span>
-      <a class="contact__value ulink" href="mailto:contacto@desarrollocardon.com">contacto@desarrollocardon.com</a>
-      <button class="copy magnetic" type="button" data-copy="contacto@desarrollocardon.com">
-        <span class="magnetic__inner copy__roll">
-          <span class="copy__a">Copy email</span>
-          <span class="copy__b" aria-hidden="true">Copied</span>
-        </span>
-      </button>
-      <span class="sr-only copy__status" role="status"></span>
-    </div>
-    <div class="contact__row">
-      <span class="contact__label">GitHub</span>
-      <a class="contact__value ulink" href="https://github.com/AlvaroAramayoChain" target="_blank" rel="noopener">AlvaroAramayoChain<span class="sr-only"> (opens in a new tab)</span></a>
-      <a class="contact__go magnetic" href="https://github.com/AlvaroAramayoChain" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="magnetic__inner">Open profile</span></a>
-    </div>
-    <div class="contact__row">
-      <span class="contact__label">Studio</span>
-      <a class="contact__value ulink" href="https://desarrollocardon.com/" target="_blank" rel="noopener">Desarrollo Cardón<span class="sr-only"> (opens in a new tab)</span></a>
-      <a class="contact__go magnetic" href="https://desarrollocardon.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><span class="magnetic__inner">Web development</span></a>
-    </div>
-  </div>
-
-  <div class="marquee marquee--avail" aria-hidden="true" data-speed="-0.7">
-    <div class="marquee__track">
-      <span class="marquee__item">Available for work<i></i>Available for work<i></i>Available for work<i></i></span>
+    <div class="contact">
+      <div class="contact__row">
+        <span class="label" data-i18n="contact.email">Email</span>
+        <a class="contact__value link" href="mailto:contacto@desarrollocardon.com">contacto@desarrollocardon.com</a>
+        <button class="btn copy" type="button" data-copy="contacto@desarrollocardon.com">
+          <span class="copy__roll">
+            <span class="copy__a" data-i18n="contact.copy">Copy email</span>
+            <span class="copy__b" aria-hidden="true" data-i18n="contact.copied">Copied</span>
+          </span>
+        </button>
+        <span class="sr-only copy__status" role="status"></span>
+      </div>
+      <div class="contact__row">
+        <span class="label">GitHub</span>
+        <a class="contact__value link" href="https://github.com/AlvaroAramayoChain" target="_blank" rel="noopener">AlvaroAramayoChain<span class="sr-only" data-i18n="a11y.newtab">(opens in a new tab)</span></a>
+        <span class="contact__note label" data-i18n="contact.githubNote">Code &amp; side projects</span>
+      </div>
+      <div class="contact__row">
+        <span class="label" data-i18n="contact.studio">Studio</span>
+        <a class="contact__value link" href="https://desarrollocardon.com/" target="_blank" rel="noopener">Desarrollo Cardón<span class="sr-only" data-i18n="a11y.newtab">(opens in a new tab)</span></a>
+        <span class="contact__note label" data-i18n="contact.studioNote">Web development</span>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer class="foot" data-theme="ink">
-  <span>© <span class="year">2026</span> Alvaro Aramayo Chain</span>
-  <span class="foot__loc">Salta, Argentina, <time class="clock" datetime="">--:--</time></span>
-  <a class="foot__top magnetic" href="#top"><span class="magnetic__inner">Back to top <span class="foot__arrow" aria-hidden="true">↑</span></span></a>
+<footer class="footer">
+  <div class="wrap footer__inner label">
+    <span>© <span class="year">2026</span> Alvaro Aramayo Chain</span>
+    <span data-i18n="foot.loc">Salta, Argentina</span>
+    <a class="link footer__top" href="#top"><span data-i18n="foot.top">Back to top</span> <span class="footer__arrow" aria-hidden="true">↑</span></a>
+  </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" defer></script>
-<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" integrity="sha384-B2WBjDzEjJpYvhmi2UyEn7rektqkf5suS6sNoyyrf0EBAwBHdkiXxIlU0V5Ru2ed" crossorigin="anonymous" defer></script>
+<script src="i18n.js"></script>
 <script src="app.js" defer></script>
 </body>
 </html>
